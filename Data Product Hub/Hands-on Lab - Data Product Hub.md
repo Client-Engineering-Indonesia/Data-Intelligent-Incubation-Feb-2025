@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/08fb55da-617c-4d25-9be3-9261f6608a8e)# Data Product Hub
+# Data Product Hub
 IBM Data Product Hub empowers data producers to publish curated data products for easy access by data consumers within their community. This lab introduces the critical features of Data Product Hub, demonstrating its capabilities in data sharing across an organization and automating the delivery of data products for users of all skill levels. Integrating with various source systems, Data Product Hub simplifies the onboarding of data products, regardless of their origin. Data producers can package, operationalize, and share reusable data products such as datasets, AI models, and notebooks. Business users and other data consumers can quickly discover these curated data products and receive them in a format optimized for their needs, reducing friction and improving enterprise data quality, reliability, and discoverability.
 
 # What is a Data Product?
