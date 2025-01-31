@@ -20,3 +20,33 @@ Data lineage is an essential component of an effective data management strategy 
 
 ## Hands On Lab
 
+This segment is continously from Knowledge catalog
+
+1. 
+<img width="1136" alt="3-bi_report" src="https://github.com/user-attachments/assets/3f9139e0-ab28-4d5b-8fa9-2bc91b20d161" />
+
+2.
+<img width="1133" alt="4-import_metadataaset" src="https://github.com/user-attachments/assets/c6b0b64c-d455-4e08-8a18-5e3e0209cd75" />
+
+3. 
+<img width="1136" alt="4-import" src="https://github.com/user-attachments/assets/74bab948-d070-4786-a592-141dd5350b37" />
+
+4. 
+<img width="1137" alt="5-" src="https://github.com/user-attachments/assets/91df496a-0262-4382-ae81-bc3f6848914e" />
+
+5. 
+<img width="1135" alt="6-" src="https://github.com/user-attachments/assets/fe04b899-3763-40a5-971e-6c8c51b42fb8" />
+
+6. 
+<img width="1134" alt="7-" src="https://github.com/user-attachments/assets/f2b3523e-77d9-4528-ad33-8f30586b6311" />
+
+7. 
+<img width="1137" alt="9-" src="https://github.com/user-attachments/assets/247a6fd3-4433-4e95-bcd6-7dc1de2669d1" />
+
+
+
+
+
+
+
+
