@@ -1,4 +1,14 @@
-## What is Manta Data Lineage?
+## Overview Manta Data Lineage
+Knowledge Catalog in conjunction with IBM Manta allows data practitioners to augment data assets in a catalog with business metadata, business lineage, and technical data lineage for all stakeholders to understand the provenance of data, how it has changed and moved over time, how it's being used.
+
+<img width="1136" alt="1-overview" src="https://github.com/user-attachments/assets/2adabdbd-d51b-485c-a594-9e5a7484bbf7" />
+
+Business users can view a high-level summary of business lineage and associated metadata: business terms and data quality scores.
+Technical users can view advanced data lineage details: technical, indirect, column level, and historical lineage.
+
+<img width="1134" alt="2-overview2" src="https://github.com/user-attachments/assets/1b47e819-da53-4521-b6cc-4b671a785a03" />
+
+## Benefit Manta Data Lineage
 Data lineage is an essential component of an effective data management strategy and data governance practice that provides tremendous benefits:
 
 1. Traceability - Where does data originate from, how has it changed over time, how is it being consumed, and by whom
@@ -8,4 +18,5 @@ Data lineage is an essential component of an effective data management strategy 
 5. Root cause analysis - Accelerate data incident identification and remediation by quickly and effectively isolating the cause of the problem
 6. Data platform migrations - Sort out the assets that need to be migrated and which ones can be ignored, saving time, money, and resources
 
-## Steps
+## Hands On Lab
+
