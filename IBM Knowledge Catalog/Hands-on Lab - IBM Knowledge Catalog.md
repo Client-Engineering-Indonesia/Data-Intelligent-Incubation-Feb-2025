@@ -3,6 +3,9 @@
 Table of contents:
 1. [Personas and their roles](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section1)
 2. [Connect your data sources](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section2)
+3. [Define Business Vocabulary](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section3)
+4. [Curate and enrich data assets](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section4)
+5. [Catalog Governed Data](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section5)
 
 <h1 id="section1">1. Personas and their roles</h1>
 
@@ -17,9 +20,7 @@ Other than the roles mentioned above, there is another role responsible for mana
 1. Defining the roles --such as Data Steward, Privacy Steward, Quality Analyst, and Business User--, setting permissions for each role, and assigning roles to users;
 2. Defining the data sources that contain the relevant data needed by the project team.
 
-
----
-# 2. Connect to data sources {#section2}
+<h1 id="section2">2. Connect to data sources</h1>
 The very first step in your journey to establishing Data Intelligence in your organization is to identify all data sources within your company and establish connections to those systems. This step is ideally performed by the Administrator or Senior Data Stewards. Some large organizations grant each data owner (producer) access to their Knowledge Catalog, allowing them to connect their data sources independently.
 
 Before the data governance lifecycle processes can begin, data stewards and data consumers need access to data. As a best practice, identifying and providing access to data sources needs to happen before data stewardship can begin so that the data is accessible to the data steward to begin discovering relevant data, analyzing data content and quality, and enforcing data privacy policies in order to provide timely access to high quality, governed data to the data consumers who will use it for analytics and AI.
@@ -34,8 +35,8 @@ Goals:
 3. You will see 3 available connections on platform level that have been created by the Administator.
 ![List of platforms connections](images/platform_connections.png)
 
----
-# 3. Define Business Vocabulary {#section3}
+<h1 id="section3">3. Define Business Vocabulary</h1>
+
 - create custom properties
 - create categories
 - create classifications 
@@ -43,26 +44,27 @@ Goals:
 - create data classes
 - create business terms
 
----
-# 4. Curate and enrich data assets {#section4}
+<h1 id="section4">4. Curate and enrich data assets</h1>
+
 - create project 
 - review available connections
 <img width="1244" alt="image" src="images/section4_1.png" />
+
 - import data assets
 - enrich data assets
 - review asset enrichment
 - review column enrichment
 - rectify 
 
----
-5. Catalog Governed Data
+<h1 id="section5">5. Catalog Governed Data</h1>
+
 - create catalog
 - publish connection
 - publish data assets
 - augment postgreSQL
 - augment Employee Metadata
 
----
+
 6. Define Policies and Rules
 - Define workflow for data privacy
 - create governance policy
