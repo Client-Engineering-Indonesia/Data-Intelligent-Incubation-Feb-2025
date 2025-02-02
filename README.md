@@ -33,5 +33,11 @@ This workshop includes several labs with steps you can follow at your own pace. 
 
 [Lab 2: Data Lineage](https://github.com/CloudPak-Outcomes/Outcomes-Projects/blob/main/IBM%20Manta%20L3%20Lab/IBM-Manta-L3-Lab.zip)
 
+### Lab Environment: 
+https://cpd-cpd.apps.678e0a57f501a868a5828e19.ocp.techzone.ibm.com/
+This environment is active only during this workshop.
 
 ### List of Accounts:
+| Username | Password | Details |
+| --- | --- | --- |
+|     |     |     |
