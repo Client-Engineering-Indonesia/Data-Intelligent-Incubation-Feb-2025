@@ -22,53 +22,34 @@ Data lineage is an essential component of an effective data management strategy 
 You can try the Manta Data Lineage here https://manta-data-linage-demo.c8f8f055.public.multi-containers.ibm.com
 ## Get BI Report Lineage
 
-1. 
-<img width="1136" alt="3-bi_report" src="https://github.com/user-attachments/assets/3f9139e0-ab28-4d5b-8fa9-2bc91b20d161" />
+1. Click the New Asset + button. <img width="1136" alt="3-bi_report" src="https://github.com/user-attachments/assets/3f9139e0-ab28-4d5b-8fa9-2bc91b20d161" />
 
-2.
-<img width="1133" alt="4-import_metadataaset" src="https://github.com/user-attachments/assets/c6b0b64c-d455-4e08-8a18-5e3e0209cd75" />
+2. Select the Import metadata for data assets task from the Recents section. <img width="1133" alt="4-import_metadataaset" src="https://github.com/user-attachments/assets/c6b0b64c-d455-4e08-8a18-5e3e0209cd75" />
 
-3. 
-<img width="1136" alt="4-import" src="https://github.com/user-attachments/assets/74bab948-d070-4786-a592-141dd5350b37" />
+3. Scroll down and select the Get BI report lineage metadata import goal. Click the Next button. <img width="1136" alt="4-import" src="https://github.com/user-attachments/assets/74bab948-d070-4786-a592-141dd5350b37" />
 
-4. 
-<img width="1137" alt="5-" src="https://github.com/user-attachments/assets/91df496a-0262-4382-ae81-bc3f6848914e" />
+4. Click the Next button. You can skip the description <img width="1137" alt="5-" src="https://github.com/user-attachments/assets/91df496a-0262-4382-ae81-bc3f6848914e" />
 
-5. 
-<img width="1135" alt="6-" src="https://github.com/user-attachments/assets/fe04b899-3763-40a5-971e-6c8c51b42fb8" />
+5. Select the Executive Dashboard catalog. Click the Next button. <img width="1135" alt="6-" src="https://github.com/user-attachments/assets/fe04b899-3763-40a5-971e-6c8c51b42fb8" />
 
-6. 
-<img width="1134" alt="7-" src="https://github.com/user-attachments/assets/f2b3523e-77d9-4528-ad33-8f30586b6311" />
+6. Click the Select scope button. <img width="1134" alt="7-" src="https://github.com/user-attachments/assets/f2b3523e-77d9-4528-ad33-8f30586b6311" />
 
-7. 
-<img width="1137" alt="9-" src="https://github.com/user-attachments/assets/247a6fd3-4433-4e95-bcd6-7dc1de2669d1" />
+7. Select the Connection from the Categories list on the left. Select the Team Content folder from the list. Click the Select button. <img width="1137" alt="9-" src="https://github.com/user-attachments/assets/247a6fd3-4433-4e95-bcd6-7dc1de2669d1" />
 
-8. 
-<img width="1142" alt="10-" src="https://github.com/user-attachments/assets/32a345a4-6a36-4f59-9d26-130f282fe627" />
+8. Click the Next button. <img width="1142" alt="10-" src="https://github.com/user-attachments/assets/32a345a4-6a36-4f59-9d26-130f282fe627" />
 
-9. 
-<img width="1134" alt="11-" src="https://github.com/user-attachments/assets/ce119f5d-aa06-4082-b80e-32f2f2f05a04" />
+12. Take the default Job name and leave scheduling turned off. Click the Refresh button on the banner to update the import status. <img width="1136" alt="14-" src="https://github.com/user-attachments/assets/f1732852-2bc5-4754-b457-bfbf4ec328e0" />
 
-10. 
-<img width="1137" alt="12-" src="https://github.com/user-attachments/assets/4d2c7fe9-eb20-4096-ae4a-a9f369ee2ba2" />
+13. Click the Next button. <img width="1137" alt="15-" src="https://github.com/user-attachments/assets/ee602e50-c631-4008-9e28-f99e80cd0e47" />
 
-11. 
-<img width="1136" alt="13-" src="https://github.com/user-attachments/assets/1225d355-b72a-4db2-947d-1cc94c69a915" />
+14. Take a minute to review the import. The Scope is importing 1 data asset from the Cognos Analytics connection into the Executive Dashboard catalog as the Target. Click the Create button. <img width="1135" alt="16-" src="https://github.com/user-attachments/assets/5702a417-5097-4002-bb42-8495f9177143" />
 
-12. 
-<img width="1136" alt="14-" src="https://github.com/user-attachments/assets/f1732852-2bc5-4754-b457-bfbf4ec328e0" />
+15. Click the Refresh button on the banner to update the import status. <img width="1137" alt="17-" src="https://github.com/user-attachments/assets/3fffd545-bd29-40f9-a282-8219230256da" />
 
-13. 
-<img width="1137" alt="15-" src="https://github.com/user-attachments/assets/ee602e50-c631-4008-9e28-f99e80cd0e47" />
+16. When the import is complete, a green informational banner will appear with a Metadata import complete message with notification. BI Report lineage imports reports, report queries and a vast amount of report query items (like columns, calculations etc.) depending on how complex the report(s) are that were processed.
 
-14. 
-<img width="1135" alt="16-" src="https://github.com/user-attachments/assets/5702a417-5097-4002-bb42-8495f9177143" />
-
-15. 
-<img width="1137" alt="17-" src="https://github.com/user-attachments/assets/3fffd545-bd29-40f9-a282-8219230256da" />
-
-16. 
-<img width="1136" alt="18-" src="https://github.com/user-attachments/assets/9ae96573-7fb2-4106-9b28-8fa4eb787444" />
+    Select the Executive Dashboard project breadcrumb at the top of the page to get back to the project home page. <img width="1136" alt="18-" 
+    src="https://github.com/user-attachments/assets/9ae96573-7fb2-4106-9b28-8fa4eb787444" />
 
 ## Get ETL Job Lineage
 1. 
