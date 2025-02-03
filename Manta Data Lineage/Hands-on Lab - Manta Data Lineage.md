@@ -38,109 +38,61 @@ You can try the Manta Data Lineage here https://manta-data-linage-demo.c8f8f055.
 
 8. Click the Next button. <img width="1142" alt="10-" src="https://github.com/user-attachments/assets/32a345a4-6a36-4f59-9d26-130f282fe627" />
 
-12. Take the default Job name and leave scheduling turned off. Click the Refresh button on the banner to update the import status. <img width="1136" alt="14-" src="https://github.com/user-attachments/assets/f1732852-2bc5-4754-b457-bfbf4ec328e0" />
+9. Take the default Job name and leave scheduling turned off. Click the Refresh button on the banner to update the import status. <img width="1136" alt="14-" src="https://github.com/user-attachments/assets/f1732852-2bc5-4754-b457-bfbf4ec328e0" />
 
-13. Click the Next button. <img width="1137" alt="15-" src="https://github.com/user-attachments/assets/ee602e50-c631-4008-9e28-f99e80cd0e47" />
+10. Click the Next button. <img width="1137" alt="15-" src="https://github.com/user-attachments/assets/ee602e50-c631-4008-9e28-f99e80cd0e47" />
 
-14. Take a minute to review the import. The Scope is importing 1 data asset from the Cognos Analytics connection into the Executive Dashboard catalog as the Target. Click the Create button. <img width="1135" alt="16-" src="https://github.com/user-attachments/assets/5702a417-5097-4002-bb42-8495f9177143" />
+11. Take a minute to review the import. The Scope is importing 1 data asset from the Cognos Analytics connection into the Executive Dashboard catalog as the Target. Click the Create button. <img width="1135" alt="16-" src="https://github.com/user-attachments/assets/5702a417-5097-4002-bb42-8495f9177143" />
 
-15. Click the Refresh button on the banner to update the import status. <img width="1137" alt="17-" src="https://github.com/user-attachments/assets/3fffd545-bd29-40f9-a282-8219230256da" />
+12. Click the Refresh button on the banner to update the import status. <img width="1137" alt="17-" src="https://github.com/user-attachments/assets/3fffd545-bd29-40f9-a282-8219230256da" />
 
-16. When the import is complete, a green informational banner will appear with a Metadata import complete message with notification. BI Report lineage imports reports, report queries and a vast amount of report query items (like columns, calculations etc.) depending on how complex the report(s) are that were processed.
+13. When the import is complete, a green informational banner will appear with a Metadata import complete message with notification. BI Report lineage imports reports, report queries and a vast amount of report query items (like columns, calculations etc.) depending on how complex the report(s) are that were processed.
 
     Select the Executive Dashboard project breadcrumb at the top of the page to get back to the project home page. <img width="1136" alt="18-" 
     src="https://github.com/user-attachments/assets/9ae96573-7fb2-4106-9b28-8fa4eb787444" />
 
 ## Get ETL Job Lineage
-1. 
+This step creates a Metadata import with a goal of Get ETL job lineage using an IBM Manta scanner to connect to DataStage to collect and document all the technical data lineage for the Executive Dashboard DataStage flow that was created and executed by the data engineer. 
+
 <img width="1135" alt="19-" src="https://github.com/user-attachments/assets/958f48c5-aa5b-42f8-8d5a-e3fa0faf9afc" />
 
-2. 
-<img width="1137" alt="20-" src="https://github.com/user-attachments/assets/c85acaa3-9578-4a35-879e-7bb78e1d1450" />
+1. Click the New Asset + button. <img width="1137" alt="20-" src="https://github.com/user-attachments/assets/c85acaa3-9578-4a35-879e-7bb78e1d1450" />
 
-3. 
-<img width="1137" alt="21-" src="https://github.com/user-attachments/assets/952b35a7-b2ae-4cad-8eaa-8f0ac0a89a58" />
+2. Select the Import metadata for data assets task from the Recents section. <img width="1137" alt="21-" src="https://github.com/user-attachments/assets/952b35a7-b2ae-4cad-8eaa-8f0ac0a89a58" />
+ 
+3. Scroll down and select the Get ETL job lineage metadata import goal. Click the Next button.<img width="1137" alt="22-" src="https://github.com/user-attachments/assets/6e762327-cce9-46b9-ba59-f0fb13801308" />
 
-4. 
-<img width="1137" alt="22-" src="https://github.com/user-attachments/assets/6e762327-cce9-46b9-ba59-f0fb13801308" />
+4. Click the Next button. You can skip the description <img width="1133" alt="23-" src="https://github.com/user-attachments/assets/2d4033d9-da3c-484c-816b-eee13a181f7f" />
 
-5. 
-<img width="1133" alt="23-" src="https://github.com/user-attachments/assets/2d4033d9-da3c-484c-816b-eee13a181f7f" />
+6. Select the Executive Dashboard catalog. Click the Next button. <img width="1138" alt="24-" src="https://github.com/user-attachments/assets/5620a067-7ae8-45fd-84a1-bd90ec480e40" />
 
-6. 
-<img width="1138" alt="24-" src="https://github.com/user-attachments/assets/5620a067-7ae8-45fd-84a1-bd90ec480e40" />
+7. Click the Select scope button. <img width="1135" alt="25-" src="https://github.com/user-attachments/assets/c3d1a2a3-b505-4fbf-9306-1d67b885c8dc" />
 
-7. 
-<img width="1135" alt="25-" src="https://github.com/user-attachments/assets/c3d1a2a3-b505-4fbf-9306-1d67b885c8dc" />
+8. Select the DataStage flow category from the Categories list on the left. Select the Executive Dashboard DataStage flow. <img width="1135" alt="26-" src="https://github.com/user-attachments/assets/a9fff8b8-b49c-4b8d-9b14-4b6b4b7c14b6" />
 
-8.
-<img width="1135" alt="26-" src="https://github.com/user-attachments/assets/a9fff8b8-b49c-4b8d-9b14-4b6b4b7c14b6" />
+9. Select the Connection category from the Categories list on the left.Select the Arrow on the Db2 connection. Do not select the checkbox. Doing so will select all schemas and tables in the database. <img width="1136" alt="27-" src="https://github.com/user-attachments/assets/e79c1c5d-4213-4dc1-909a-b7239af4787e" />
 
-9. 
-<img width="1136" alt="27-" src="https://github.com/user-attachments/assets/e79c1c5d-4213-4dc1-909a-b7239af4787e" />
+10. Select the Arrow on the PostgreSQL connection. Do not select the checkbox. Doing so will select all schemas and tables in the database. Select the CUSTOMER schema from the list. <img width="1138" alt="28-" src="https://github.com/user-attachments/assets/d68e5836-b012-420d-8f0c-a89e6a5b7139" />
 
-10. 
-<img width="1138" alt="28-" src="https://github.com/user-attachments/assets/d68e5836-b012-420d-8f0c-a89e6a5b7139" />
+11. In the schema search area, enter the letters ware to find the WAREHOUSE schema in the list. Select the WAREHOUSE schema from the list. <img width="1138" alt="29-" src="https://github.com/user-attachments/assets/4e206e4d-94cf-45cd-9bd6-5bb6dc01fde6" />
 
-11. 
-<img width="1138" alt="29-" src="https://github.com/user-attachments/assets/4e206e4d-94cf-45cd-9bd6-5bb6dc01fde6" />
+12. Before continuing, review the scope selections and make sure the DataStage flow, Db2 CUSTOMER and OUTCOMES schemas and the PostgreSQL CUSTOMER and WAREHOUSE schemaS are included in the scope. Click the Next button. <img width="1136" alt="41-" src="https://github.com/user-attachments/assets/89595eb6-1be3-4b57-a5db-61a76ce84080" />
 
-12.
-<img width="1134" alt="30-" src="https://github.com/user-attachments/assets/8047bb4e-d13f-4661-9e28-840836f59acf" />
+13. Take the default Job name and leave scheduling turned off. Click the Next button. <img width="1136" alt="42-" src="https://github.com/user-attachments/assets/9d11a86a-fe58-412a-85b7-5318e4a58df9" />
 
-13.
-<img width="1137" alt="31-" src="https://github.com/user-attachments/assets/424630fe-5e4a-4d03-9698-1f6b6f1cc21b" />
+14. Take the default Advanced options that are selected for the Update on reimport options. Click the Next button <img width="1137" alt="43-" src="https://github.com/user-attachments/assets/0f30f50e-4770-4028-bff8-6680cf7f3548" />
 
-14. 
-<img width="1133" alt="32-" src="https://github.com/user-attachments/assets/bf37679b-11f7-45d7-86ab-fd43d4b6142f" />
+15. Click the Create button. <img width="1135" alt="44-" src="https://github.com/user-attachments/assets/2046641d-40c2-41f7-a846-988097b24222" />
 
-15.
-<img width="1137" alt="33-" src="https://github.com/user-attachments/assets/20a92c32-a70d-460e-8346-35401b948bb0" />
+    An error message box might appear in the top right corner that looks like the screen shot below saying the Metadata Import asset with this name already exists. This is a known defect that has been reported to development <img width="1135" alt="45-" src="https://github.com/user-attachments/assets/e066505e-81d8-4ccb-a473-4a54e7c56783" />
 
-16. 
-<img width="1134" alt="34-" src="https://github.com/user-attachments/assets/00aead7e-cc78-4b89-b661-e4944e233620" />
+    Add a suffix like v2 to the end of the name. Click the Next button 4 times to the last page of import wizard that has the Create button <img width="1135" alt="46-" src="https://github.com/user-attachments/assets/488adc9a-518b-4693-a55a-b45148674cfb" />
 
-17.
-<img width="1136" alt="35-" src="https://github.com/user-attachments/assets/f0b8aae1-c047-4251-98d6-d5256db9ccd2" />
+16. Click the Refresh button on the banner to update the import status. <img width="1136" alt="47-" src="https://github.com/user-attachments/assets/6e91066b-d77c-4b80-80f3-968e3d53f3f3" />
 
-18. 
-<img width="1136" alt="36-" src="https://github.com/user-attachments/assets/8018d0a6-9d15-4c88-a6ac-4fa5525c2942" />
-
-19. 
-<img width="1131" alt="37-" src="https://github.com/user-attachments/assets/eb6dde92-929f-432c-b9d5-d24dbe88990c" />
-
-20. 
-<img width="1137" alt="38-" src="https://github.com/user-attachments/assets/d0e617c8-a667-48e7-80db-07fc7c4e0437" />
-
-21. 
-<img width="1136" alt="39-" src="https://github.com/user-attachments/assets/18e2f55b-b223-41a8-9be7-0f1b70574e66" />
-
-22. 
-<img width="1137" alt="40-" src="https://github.com/user-attachments/assets/ac066c2c-0f47-4017-957b-9d714ee33cb9" />
-
-23. 
-<img width="1136" alt="41-" src="https://github.com/user-attachments/assets/89595eb6-1be3-4b57-a5db-61a76ce84080" />
-
-24. 
-<img width="1136" alt="42-" src="https://github.com/user-attachments/assets/9d11a86a-fe58-412a-85b7-5318e4a58df9" />
-
-25. 
-<img width="1137" alt="43-" src="https://github.com/user-attachments/assets/0f30f50e-4770-4028-bff8-6680cf7f3548" />
-
-26. 
-<img width="1135" alt="44-" src="https://github.com/user-attachments/assets/2046641d-40c2-41f7-a846-988097b24222" />
-
-27. 
-<img width="1135" alt="45-" src="https://github.com/user-attachments/assets/e066505e-81d8-4ccb-a473-4a54e7c56783" />
-
-28. 
-<img width="1135" alt="46-" src="https://github.com/user-attachments/assets/488adc9a-518b-4693-a55a-b45148674cfb" />
-
-29. 
-<img width="1136" alt="47-" src="https://github.com/user-attachments/assets/6e91066b-d77c-4b80-80f3-968e3d53f3f3" />
-
-30. 
-<img width="1138" alt="48-" src="https://github.com/user-attachments/assets/ff12d443-47dd-4192-9242-08baf7b38fda" />
+30. When the import is complete, a green informational banner will appear with a Metadata import complete message with notification. 
+    ETL Job lineage imports data integration jobs, stages, tables and files that are source and target dependencies, and a vast amount of data     
+    integration columns depending on how complex the data integration job is and how many dependencies there are that were processed. <img width="1138" alt="48-" src="https://github.com/user-attachments/assets/ff12d443-47dd-4192-9242-08baf7b38fda" />
 
 
 ## Review Lineage Results
