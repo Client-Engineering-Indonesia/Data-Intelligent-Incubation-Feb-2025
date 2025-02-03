@@ -1,4 +1,4 @@
-## Overview Manta Data Lineage
+# Overview Manta Data Lineage
 Knowledge Catalog in conjunction with IBM Manta allows data practitioners to augment data assets in a catalog with business metadata, business lineage, and technical data lineage for all stakeholders to understand the provenance of data, how it has changed and moved over time, how it's being used.
 
 <img width="1136" alt="1-overview" src="https://github.com/user-attachments/assets/2adabdbd-d51b-485c-a594-9e5a7484bbf7" />
@@ -8,7 +8,7 @@ Technical users can view advanced data lineage details: technical, indirect, col
 
 <img width="1134" alt="2-overview2" src="https://github.com/user-attachments/assets/1b47e819-da53-4521-b6cc-4b671a785a03" />
 
-## Benefit Manta Data Lineage
+# Benefit Manta Data Lineage
 Data lineage is an essential component of an effective data management strategy and data governance practice that provides tremendous benefits:
 
 1. Traceability - Where does data originate from, how has it changed over time, how is it being consumed, and by whom
@@ -18,9 +18,8 @@ Data lineage is an essential component of an effective data management strategy 
 5. Root cause analysis - Accelerate data incident identification and remediation by quickly and effectively isolating the cause of the problem
 6. Data platform migrations - Sort out the assets that need to be migrated and which ones can be ignored, saving time, money, and resources
 
-## Hands On Lab
-
-This segment is continously from Knowledge catalog
+# Hands On Lab
+## Get BI Report Lineage
 
 1. 
 <img width="1136" alt="3-bi_report" src="https://github.com/user-attachments/assets/3f9139e0-ab28-4d5b-8fa9-2bc91b20d161" />
@@ -42,6 +41,36 @@ This segment is continously from Knowledge catalog
 
 7. 
 <img width="1137" alt="9-" src="https://github.com/user-attachments/assets/247a6fd3-4433-4e95-bcd6-7dc1de2669d1" />
+
+8. 
+<img width="1142" alt="10-" src="https://github.com/user-attachments/assets/32a345a4-6a36-4f59-9d26-130f282fe627" />
+
+9. 
+<img width="1134" alt="11-" src="https://github.com/user-attachments/assets/ce119f5d-aa06-4082-b80e-32f2f2f05a04" />
+
+10. 
+<img width="1137" alt="12-" src="https://github.com/user-attachments/assets/4d2c7fe9-eb20-4096-ae4a-a9f369ee2ba2" />
+
+11. 
+<img width="1136" alt="13-" src="https://github.com/user-attachments/assets/1225d355-b72a-4db2-947d-1cc94c69a915" />
+
+12. 
+<img width="1136" alt="14-" src="https://github.com/user-attachments/assets/f1732852-2bc5-4754-b457-bfbf4ec328e0" />
+
+13. 
+<img width="1137" alt="15-" src="https://github.com/user-attachments/assets/ee602e50-c631-4008-9e28-f99e80cd0e47" />
+
+14. 
+<img width="1135" alt="16-" src="https://github.com/user-attachments/assets/5702a417-5097-4002-bb42-8495f9177143" />
+
+15. 
+<img width="1137" alt="17-" src="https://github.com/user-attachments/assets/3fffd545-bd29-40f9-a282-8219230256da" />
+
+16. 
+<img width="1136" alt="18-" src="https://github.com/user-attachments/assets/9ae96573-7fb2-4106-9b28-8fa4eb787444" />
+
+##
+
 
 
 
