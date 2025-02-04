@@ -8,6 +8,8 @@ Table of contents:
 5. [Catalog Governed Data](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section5)
 6. [Define Policies and Rules](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section6) 
 7. [Manage Data Quality](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section7) 
+8. [About IBM Knowledge Accelerator](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section7) 
+
 
 
 <h1 id="section1">1. Personas and their roles</h1>
@@ -413,46 +415,634 @@ Steps:
 Notice that data classes are not assigned at the asset level and that no business terms were assigned at the asset level. It is more important to have business terms automatically assigned at the column level, especially if business terms are being used to trigger data protection rule actions. Business terms at the data asset level are primarily for informational purposes. 
 ![section4_27](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image221.png)
 
+**Click the Columns tab.**
+Pay close attention to the data class assignments for these 5 columns: `Birth Date`, `Email`, `SSN`, `Fax` and `Work Phone` because we will implement data protection rules against those columns. These columns need to be assigned the correct data class.  If they are not, then set them to the proper data class in the screen shots below.
+![section4_47](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image222.png)
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image223.png)
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image224.png)
+
+ⓘ **Note: Metadata enrichment can be unpredictable.** This lab was tested many times over with the same results produced. If for some reason your results for the other non sensitive columns are different, don't worry about them and move on.
+
+**Data Quality Assessment**
+As noted when reviewing the data assets, the EMPLOYEE data asset has a quality score of 98.6 so it is inevitable that some of the column data quality scores are going to be below 100%. The Quality Analyst will be looking into data quality in more depth in an upcoming step but we can spend a few minutes to take a look at what columns are contributing to the lower quality score.
+1. Scroll up to the top of the page.
+2. Click the Data quality column header to sort the columns in descending order (Arrow pointing up).
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image225.png)
+3.Select the high level checkbox to select all columns in the list.
+4.Using the More action dropdown on the toolbar, select `Mark as reviewed`.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image226.png)
+5. Click the `Done` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image227.png)
+6. Click the `Refresh` button in the top right corner of the message displayed. The Review status columns now has a check mark next to all the columns.
+7. Click the `Assets` tab.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image228-2.png)
 
 
 ### 8. Rectify Enrichment Result
+In this step, business terms will be added to all the Assets and primary key suggestions will be reviewed and accepted. Knowledge Catalog considers suggested metadata (business terms, data classes and primary keys) as missing so they are not considered during any decision making processes. Therefore, it is a best practice to review all suggestions and either remove or accept them.
 
+Goals:
+- [ ] Rectify EMPLOYEE data asset
+- [ ] Rectify WAREHOUSE_STAFF data asset
+
+**Rectify EMPLOYEE table**
+1. Hover over the `Business terms` column of the `EMPLOYEE` asset, click the `View more` link that appears.
+2. Click the `+` sign in the `Business terms` section of the `Governance` tab.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image228.png)
+3. Select the checkbox next to the `Date of Birth` business term.
+4. Select the checkbox next to the `Email` business term.
+5. Select the checkbox next to the `Fax` business term.
+6. Scroll down to the bottom of the list, Do not click the `Assign` button until you are instructed.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image229.png)
+7. Select the checkbox next to the `Work Phone` business term.
+8. Select the checkbox next to the `SSN` business term.
+9. Click the `Assign` button. Multiple dialog boxes will appear with notification that the business terms were assigned.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image230.png)
+10. Hover over the `Primary key` column of the `EMPLOYEE` asset, click the `View more` link that appears.
+11. Scroll down in the `Key`s` tab of the right side panel.
+12. Click the `Assign` button for the `EMPLOYEE_CODE` column in the `Keys` tab. A dialog boxes will appear notifying you that the primary key was assigned.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image231.png)
+
+**Rectify WAREHOUSE_STAFF table**
+1. Hover over the `Business terms` column of the `WAREHOUSE_STAFF` asset, click the `View more` link that appears.
+2. Click the `+` sign in the `Business terms` section of the `Governance` tab.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image232-4.png)
+3. Using the search area, enter the words 'skill'.
+4. Select the checkbox next to the `Skill Set` business term.
+5. Select the checkbox next to the `Skill Required` business term.
+6. Select the checkbox next to the `Skill Experience` business term.
+7. Click the `Assign` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image232-5.png)
+8. Hover over the `Primary key` column of the `WAREHOUSE_STAFF` asset, click the `View more` link that appears.
+9. Click the `Assign` button for the `EMPLOYEE_CODE` column in the `Keys` tab. A dialog boxes will appear notifying you that the primary key was assigned.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image232-6.png)
+
+**Mark as Reviewed**
+This completes the modifications you will make at the Asset level so the status of the Assets can be set to Reviewed. All assets now have a correct, meaningful and useful set of business terms and primary keys assigned that will provide additional information to help end users understand their content.
+1. Select the high level checkbox to select EMPLOYEE and WAREHOUSE_STAFF in the list.
+2. Using the `More` dropdown from the toolbar, select `Mark as reviewed`.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image232.png)
+3. Click the `Done` button.
+4. Click the `Refresh` button in the top right corner of the message displayed.
+5. The Review status columns now has a check mark next to all the assets indicating that they have been reviewed. Select the `Business Catalog Enrichment` breadcrumb at the top of the page to get back to the project home page.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image235.png)
 
 <h1 id="section5">5. Catalog Governed Data</h1>
 
-- create catalog
-- publish connection
-- publish data assets
-- augment postgreSQL
-- augment Employee Metadata
+The data curation process is complete and the Data Steward is ready to create the governed catalog and publish the fully enriched data assets to the catalog so they are ready for use by the analytics project team to accomplish their data and AI analytical objectives.
+
+### 1. Create the Knowledge Catalog
+We will create a **governed** catalog, named `Business`. By governed, it means sensitive, confidential, or personally identifiable information (PII) is protected by data protection rules. We will create this rule in the next section, as a Privacy Steward.
+1. Select the Navigation menu (the 4 stacked horizontal lines in the upper left corner).
+2. Select the `Catalogs` > `All catalogs` menu.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image317.png)
+3. Click the `New Catalog +` button.
+4. Fill the `Name` field: `Business`
+5. Fill the `Description` field: `This catalog stores governed assets used by the business for analytical and AI projects.`
+6. Select the checkbox to `Enforce data protection rules`.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image319.png)
+7. Click the `OK` button when asked to `Permanently enable rule enforcement?`.
+8. Set the switch to `On` in the `Controls` section to `Alow reporting on asset metadata`.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image321.png)
+9. Click the `OK` button when asked to `Allow reporting on this catalog?`.
+ⓘ Note: This setting is mandatory and needs to be set in order for the Data Steward and Quality Analyst to report on and query metadata for this catalog. Turning on this setting allows Knowledge Catalog to collect metadata about this catalog. It stores the metadata in the internal Db2 reporting database that was created at the beginning of the lab.
+10. Keep the default option to `Update original assets` in the `Duplicate asset handling` section.
+11. Click the `Create` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image322-2.png)
+12. Click the `Access control` tab.
+13. Using the `Add collaborators` dropdown, select `Add user group`.
+14. Select `Viewer` for the access level. It should be selected by default.
+15. Enter the wold 'all' in the Groups search area.
+16. Select the `All users` group that appears.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image322-5.png)
+17. Click the `Add` button.
+18. Select the `Catalogs` breadcrumb at the top of the page to go back to the catalog home page.
+19. Select the `Navigation` menu (the 4 stacked horizontal lines in the upper left corner).
+20. Select the `Projects` > `All projects` menu.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image324.png)
+21. Select the `Business Catalog Enrichment` project. 
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image325.png)
+
+### 2. Publish Connections
+In this section, the data source connections will be published one at a time, and in the order listed in the instructions below, to the governed Business catalog before any data assets are published. This will place them at the end of the Recently added featured assets category in the catalog, leaving room for the data assets to appear front and center, in order of importance, so they are easily found and viewable.
+
+Goals:
+- [ ] Publish Connection data asset to PostgreSQL into the catalog.
+- [ ] Publish Connection data asset to DB2 into the catalog.
+
+Steps:
+1. Select the `X` in the top right corner of the information panel to close it.
+2. From the `Assets types` section on the left, select `Data access` > `Connections`.
+3. Select the checkbox next to the `PostgreSQL` connection.
+4. Click the `Publish to catalog` button on the toolbar.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image327.png)
+5. Make sure the `Business` catalog is selected. It should be selected by default because it is the only governed catalog the `Data Steward` has access to.
+6. Select the `Next` button.
+7. Fill the `Description` field: `PostgreSQL database that contains the warehouse data needed by the business for analytics and AI.`
+8. Click the `Next` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image329.png)
+9. Click the `Publish` button.
+10. Select the checkbox next to the `Db2 Warehouse` connection.
+11. Click the `Publish to catalog` button on the toolbar.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image331-1.png)
+12. Make sure the `Business` catalog is selected. It should be selected by default.
+13. Select the `Next` button.
+14. Fill the `Description` field: `Db2 Warehouse database that contains employee data needed by the business for analytics and AI projects.`
+15. Click the `Next` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image331-3.png)
+16. Click the `Publish` button.
+
+### 3. Publish Data Assets
+In this section, the data assets will be publish to the Business catalog. Like connections, the data assets are published in a specific order, so that the Recently Added eatured assets category in the catalog gets populated properly. The WAREHOUSE data assets will get published first and the EMPLOYEE data asset will get published last.
+
+Goals: 
+- [ ] Publish WAREHOUSE_STAFF data asset
+- [ ] Publish EMPLOYEE data asset
+
+Steps: 
+**Publish WAREHOUSE_STAFF**
+1. Select the checkbox next to the `WAREHOUSE_STAFF` data asset.
+2. Click the `Publish to catalog` button on the toolbar.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image336.png)
+3. Make sure the `Business` catalog is selected. It should be selected by default.
+4. Select the `Next` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image333.png)
+5. Fill `Description` field: `All employee that work as staff members in the warehouse processing orders.`
+6. Click the `Next` button.
+7. Click the `Publish` button.
+
+**Publish EMPLOYEE**
+1. Select the checkbox next to the `EMPLOYEE` data asset.
+2. Click the `Publish to catalog` button on the toolbar.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image339-4.png)
+3. Make sure the `Business` catalog is selected. It should be selected by default.
+4. Select the `Next` button.
+5. Select the checkbox to `Go to the catalog after publishing it`.
+6. Fill `Description`: `Official and current Employee master`.
+7. Click the `Next` button.
+8. Click the `Publish` button.
+
+### 4. Augment DB2 Warehouse
+In this section, additional metadata will be added to the cataloged data assets that were just published like classifications, related assets, tags, and reviews so data consumers can better understand and trust the data content and to contribute further to the knowledge base of the Knowledge Catalog search engine to make it easier for users to find what they are looking for.
+
+In this step, classifications, related assets and tag metadata will be added to the Db2 Warehouse connection.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image347.png)
+
+**Add Classifications**
+1. Select the `Add classifications +` button in the `Classifications` section. Select the checkbox next to the `Sensitive Information classification`.
+2. Select the checkbox next to the `Personal Information classification`.
+3. Select the checkbox next to the `Personally Identifiable Information` classification.
+4. Click the `Save` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image349.png)
+
+**Add related assets**
+1. Using the Add `related items` dropdown, select `Add related assets`.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image350.png)
+2. Select `Contains` as the relationship type.
+3. Click the `Next` button.
+4. Select the checkbox next to the `EMPLOYEE` asset.
+5. Click the `Add` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image352.png)
+
+**Add Tags**
+1. In the `Tags` section of the `About this asset` panel, click the `Add` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image353.png)
+2. Using the `Search tags` dropdown, select the `EMPLOYEE` tag.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image354.png)
+3. Click the `Apply` button
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image355.png)
+
+**Add Reviews**
+1. Click the `Review` tab.
+2. Click the `5th` star to the far right to assign a `5 Star` rating.
+3. Fill the `Comments` area: `Contains all governed, trusted and quality data approved and published by the data governance team to use for analytical and AI projects. Some of the data is sensitive but data protection rules are in place to govern it`.
+4. Click the `Submit` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image356.png)
+5. Select the `Business` breadcrumb on the toolbar to get back to the asset list.
+
+### 5. Augment Employee Metadata
+1. Click the `EMPLOYEE` data asset from the asset list.
+2. Scroll down the Overview section until the `Governance artifacts` section is at the top of the page.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image358-1.png)
+**Add Classification**
+3. Select the `Add classification +` button in the `Classifications` section.
+4. Select the checkbox next to the `Sensitive Information classification`.
+5. Select the checkbox next to the `Personal Information classification`.
+6. Select the checkbox next to the `Personally Identifiable Information` classification.
+7. Click the `Save` button.
+
+**Add related assets**
+1. Scroll down to the `Related items` section.
+2. Using the `Add related items` dropdown, select `Add related assets.`
+![images](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image360.png)
+3. Using the search area, enter the word `related`.
+4. Select `Is Related to` as the relationship type.
+5. Click the `Next` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image361.png)
+6. Select the checkbox next to the `WAREHOUSE_STAFF` asset.
+7. Click the `Add` button.
+
+**Add Tags**
+1. Scroll down to the bottom of the `Overview` section to see the new `Related items` that were added.
+2. Scroll down in the `About this asset` panel to the `Tags` section.
+3. Click the `Edit` button (looks like a pencil) in the `Tags` section.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image363.png)
+4. Using the `Search tags` dropdown, select the `WAREHOUSE` tag.
+5. Click `Apply` button.
+
+**Add Reviews**
+1. Click the `Review` tab.
+2. Click the 5th star to the right to assign a 5 Star rating.
+3. Fill `Comments` area: `Contains governed and trusted employee data to use for business analytical projects. This is the full company employee record master. It contains sensitive and personal information, but the data governance office has defined data protection rules to govern that information.`
+4. Click `Submit`.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image366.png)
+5. Select the `Business` breadcrumb on the toolbar to get back to the list.
+
 
 <h1 id="section6">6. Define Policies and Rules</h1>
 
-- Define workflow for data privacy
-- create governance policy
-- create governance rules 
-- approve as privacy steward
-- create date of birth rule
-- create email address rule
-- Approve as Privacy Steward
+In this section, the governance policies and rules and the data protection rules will be created. Governance policies and rules were added to the `Data Privacy Artifacts` governance artifacts workflow definition so they will be sent for approval to the `Privacy Steward`. After approval, they will be automatically published to the business glossary.
+
+### 1. Create governance policy
+In this step, a governance policy will be created. This lab's use case only has one policy but will continue to use the import process to assign the appropriate business terms and classifications and then assign the governance and data protection rules to the policy in a subsequent step after they are created. As a reminder, Policies were added as a condition for the Data Privacy Artifacts governance artifact workflow definition so they will have to be reviewed and approved by the Privacy Steward. Once approved, they will be published to the business glossary.
+
+Steps:
+1. Select the Navigation menu (the 4 stacked horizontal lines in the upper left corner).
+2. Select the `Governance` > `Policies` menu.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image81.png)
+3. Using the `Add policy` dropdown, select `Import from file`.
+4. Click the `Drag and drop file here or upload` link.
+5. Select the `governance-policies.csv` file from the download location.
+6. Click the `Open` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image84.png)
+7. Click the `Next` button.
+8. Select the `Replace all values` merge option.
+9. Click the `Next` button.
+10. Click the `Go to task` button.
+11. Click the `Send for approval` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image88.png)
+12. Fill `Comment` field: `This policy describes the standards and guidelines for handling sensitive information. The data used in this project contains sensitive information so this policy must be published. This policy requires the Data Privacy teams approval. Please approve this policy.`
+13. Click the `Send for approval` button. 
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image89.png)
+14. Select the Notification icon on the toolbar to read the message.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image90-1.png)
+This is only a courtesy informational message that there is a new Approve Governance Policy task and that no action needs to be taken. The approval will be done by the Privacy Steward.
+
+### 2. Create governance rules 
+Unlike data protection rules, governance rules are descriptive only rules and can't be enforced. A governance rule is a description of the criteria used to determine whether information assets are compliant with business objectives and provide the business definition of the required behavior or actions to be taken to implement a given governance policy or subject area such as information quality, retention, privacy, or regulatory compliance.
+
+Steps: 
+1. Select the Navigation menu (the 4 stacked horizontal lines in the upper left corner).
+2. Select the `Governance` > `Rules` menu.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image120.png)
+3. Using the `Add rule` dropdown, select `Import from file`.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image121.png)
+4. Click the `Drag and drop file here or upload` link.
+5. Select the `governance-rules.csv` file from the download location.
+6. Click the `Open` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image123.png)
+7. Click the `Next` button.
+8. Select the `Replace all values` merge option.
+9. Click the `Next` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image125.png)
+The import should complete successfully with 4 new Governance rule drafts.
+10. Click the `Go to task` button.
+11. Click the `Send for approval` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image127.png)
+12. Give comment: `The data for this project contains an employees Birth Date, Email Address, US Social Security Number (National Identifier) and Work Phone which must be protected per corporate policy. These rules need the Data Privacy teams approval. Please approve them.`
+13. Click the `Send for approval` button.
+14. Select the Notification icon on the toolbar to read the message.
+
+### 3. Approve as the Privacy Steward
+In order to approve the policy and governance rules in the next step, that were just sent for approval by the Data Steward, logout and login as the Privacy Steward.
+
+**Approve Governance Rules**
+Login to the system as the Privacy Steward. 
+1. Select the link in the Notifications section to Approve governance rules.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image132-5.png)
+As the Privacy Steward, read the comments left by the Data Steward and review the governance rules that have been sent for approval to ensure they meet corporate standards and guidelines based on the sensitivity of the data that was requested by the analytics project team.
+2. Click the `Publish` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image132-6.png)
+3. Give comment: `I have read the detailed comments and have reviewed the governance rules defined. All the proper rules have been defined. Based on these rules, a data protection rule must also be defined that takes action on these rule definitions. I approve this task!`
+4. Click the `Publish` button. The `Governance rules` will be published with one task remaining to `Approve Policies`.
+
+**Approve Governance Policy**
+5. Click the Publish button.
+6. Give `Comment`: `I have read the detailed comments and have reviewed the proposed governance policy. This is the approved standard corporate policy on how to handle and protect sensitive information that should be defined and published. I approve this task!`
+7. Click the `Publish` button.
+
+**Login back as Data Steward**
+8. Click the user Avatar on the toolbar.
+9. Select Log out from the menu.
+10. Log in using username ans password of the data steward.
+11. Check Policies and Rules that have just been published. 
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image132-17.png)
+
+### 4. Create Data Protection Rules 
+Data protection rules dynamically control access to data in governed catalogs. Data that is added from a governed catalog to a project will only be protected by data protection rules if the data was added to the governed cataloged by a deep enforcement solution.
+
+Data protection rules are **automatically enforced in a governed catalog** when a catalog member attempts to view or act on a data asset in a governed catalog to prevent unauthorized users from accessing sensitive data. However, if the user who is trying to access the asset is the **owner of the asset** (by default, the user who created the asset), then access **is always granted**.
+
+Goals:
+- [ ] Create Date of Birth Rule
+- [ ] Create Email Address Rule 
+- [ ] Associate Rules to Policy 
+- [ ] Approve Policy Changes
+
+Steps:
+**Create Date of Birth rule**
+In this step, a data protection rule will be created to mask data classified as a Date of Birth. The Obfuscate masking method will be chosen and utilize some of the advanced data privacy options that are specific to a date of birth.
+1. Using the `Add rule` dropdown, select `New data protection rule`.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image132.png)
+2. Fill `Name` field: `Protect Date of Birth`
+3. Fill `Business definition` field: `Protect all birth dates using the data privacy advanced masking method.`
+4. Click the `Next` button. 
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image133.png)
+5. In the `When does this rule apply?` section, specify the rule `Criteria` as follows:
+Using the If statement dropdown on the left, select `Data class`.
+6. Using the If statement dropdown on the right, select `contains any`.
+7. Enter the word 'birth' (in lower case) into the `Data class` field.
+8. Select `Date of Birth` from the data class list that appears.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image134.png)
+9. In the `What does this rule do?` section, specify the rule `Action` as follows:
+Using the `Action` dropdown on the left, select `Obfuscate columns`.
+10. Using the `When column has` dropdown in the middle, select `Data class`.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image135.png)
+11. Scroll down to the `Advanced masking options` section.
+Using the `Date similarity` dropdown, select `Mask date to same time period`.
+12. Select the `Same quarter` option. A sample of the obfuscation results will be displayed in the Example area.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image136.png)
+13. Click the `Create` button.
+
+The Advanced masking options for this rule should be set as follows:
+| Advanced Option | Option Setting |
+| --- | --- |
+| Obfuscate method	| Preserve format (default) |
+| Date Similarity	| Mask date to same time period with Same quarter option |
+| Reversibility	| Irreversible masking |
+| Consistency	| Repeatable |
+| Input Validation	| Selected and enabled |  
+
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image137.png)
+14. The `Where are data protection rules enforced?` dialog appears. This dialog will appear every time you create a data protection rule. Read the message and select the `I understand` checkbox.
+15. Click the `Continue` button.
+16. Select the `Rules` breadcrumb in the upper left corner to return to Rules main page.
+
+**Create Email Address rule**
+1. Using the `Add rule` dropdown, select `New data protection rule`.
+2. Fill `Name` field: `Protect Email Addresses`
+3. Fill `Business definition` field: `Protect all email addresses using the data privacy advanced masking method.`
+4. Click the `Next` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image140.png)
+5. In the `When does this rule apply?` section, specify the rule `Criteria` as follows:
+Using the If statement dropdown on the left, select `Data class`.
+6. Using the If statement dropdown on the right, select `contains any`.
+7. Enter the word 'email' (in lower case) into the `Data class` field.
+8. Select `Email Address` from the data class list that appears.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image141.png)
+9. In the `What does this rule do?` section, specify the rule `Action` as follows:
+Using the Action dropdown on the left, select `Obfuscate columns`.
+10. Using the `When column has` dropdown in the middle, select `Data class`.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image142.png)
+11. Scroll down to the `Advanced masking options` section.
+In the `Domain name` section, select the `Custom` option.
+12. Enter `cpd.ibm.com` for the `Custom` domain name.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image143.png)
+13. Click the `Create` button.
+
+The Advanced masking options for this rule should be set as follows:
+| Advanced Option | Option Setting |
+| --- | --- |
+| Obfuscate method	| Preserve format (default) |
+| Username format	| Generate user name |
+| Domain name	| Custom - cpd.ibm.com |
+| Consistency	| Repeatable |
+| Input Validation	| Selected and enabled |  
+
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image144.png)
+
+14. The `Where are data protection rules enforced?` dialog appears. This dialog will appear every time you create a data protection rule. Read the message and select the `I understand` checkbox.
+15. Click the `Continue` button.
+16. Select the `Rules` breadcrumb in the upper left corner to return to Rules main page.
+
+**Associate Rules to Policy**
+1. Select the Navigation menu (the 4 stacked horizontal lines in the upper left corner).
+2. Select the `Governance` > `Policies` menu.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image161-1.png)
+3. Select the `Protection of Sensitive Personal Information` policy.
+4. Scroll down to the `Rules` section. Click the `Add rules +` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image162.png)
+5. Select the checkbox next to the `All Birth Dates Must be Protected` rule.
+6. Select the checkbox next to the `All Email Addresses Must be Protected` rule.
+7. Select the checkbox next to the `All National Identifiers Must be Protected` rule.
+8. Select the checkbox next to the `All Phone Numbers Must be Protected` rule.
+9. Click the `Add` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image163.png)
+10. Click the `Add data protection rules +` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image164.png)
+11. Select the checkbox next to the `Protect Date of Birth`rule.
+12. Select the checkbox next to the `Protect Email Addresses` rule.
+13. Select the checkbox next to the `Protect US Phone Numbers` rule.
+14. Select the checkbox next to the `Protect US Social Security Numbers` rule.
+15. Click the `Add` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image165.png)
+16. Click the `Send for approval` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image166.png)
+17. Give comment: `The data protection rules have been created as required and the governance and data protection rules have been assigned to the policy for everyone to easily understand and adhere to them. Please approve and publish these changes.`
+18. Click the `Send for approval` button.
+
+**Approve Policy Changes**
+Log out from Data Steward account and login as the Privacy Steward. 
+1. Select the link in the `Notifications` section to `Approve Policy Personal and Sensitive Information`.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image167-8.png)
+2. Click the `Publish` button.
+3. Give comment: `Thank you for adding the data protection rules as instructed and for adding all the rules to the policy for everyone to understand and comply with. I trust your changes and approve this task!`
+4. Click the `Publish` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image167-10.png)
+5. Log in back as the Data Steward and see the changes in `Protection of Personal and Sensitive Information` Policy.
+
+**Explore Relationship**
+1. Click the `Explore Relationships` button from the policy.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image167-18.png)
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image167-22.png)
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image167-25.png)
+
 
 <h1 id="section7">7. Manage Data Quality </h1>
 
-- data quality remidiation workflow
-- review quality result
-- add db2 connection 
-- create data quality definition
-- create data quality Rule
-- create data quality SLA rule
-- activate SLA rule monitoring
+In this section, the Quality Analyst will review the metadata enrichment data quality results produced during the Metadata enrichment by the Data Steward, develop a data quality definition, create a data quality rule, evaluate the quality rule results, and assess data quality SLA rule compliance by implementing a data quality analysis and monitoring process.
 
----
-8. Discover Data
-- Find the right data
-- review featured assets
-- review employee data
+First, **Login as the Quality Analyst.**
 
----
-9. About IBM Knowledge Accelerator
+### 1. Review the Quality Results
+In this step, the Quality Analyst will review the metadata enrichment data quality results produced during the Metadata enrichment process.
+Steps:
+1. Select the Navigation menu (the 4 stacked horizontal lines in the upper left corner).
+2. Select the `Projects` > `All projects` menu.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image241.png)
+3. Select the `Business Catalog Enrichment` project.
+4. Click the `Asset` tab.
+5. Select the `Business Catalog Enrichment` Metadata Enrichment asset.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image243.png)
+The Quality Analyst will focus on the EMPLOYEE data asset because it has the lowest quality score of 98.6% and all the other WAREHOUSE data assets have a quality score of 100%.
+6. Select the `X` in the top right corner of the `About this metadata enrichment` panel to close it and gain more real estate.
+7. Hover over the `Data quality` column of the `EMPLOYEE` asset, click on the `Data quality score` link when it appears.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image244.png)
+8. Click the `Focus and percentage of data with issues` column header twice to sort the dimensions in descending order (arrow pointing down).
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image245.png)
+9. Scroll down to see all the data quality checks.
+The primary contributing reasons for the lower data quality score is due to Suspect values with 9.4% of values in violation and Unexpected duplicated values with much lower 2.5% of values in violation. The duplicate values are not a big concern because Employee's can live in the same state and zip code and can even have the same work phone extension across different locations, but the suspect values is an indication that the column has not met the columns data classification matching criteria when it was profiled during the enrichment processLet's so we can drill down to the column data quality statistics to take an even closer look.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image246.png)
+10. Click the `Columns` tab.
+11. Click the `Score` column header once to sort the dimensions in ascending order (arrow pointing up).
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image247.png)
+12. Click the X in the top right corner of the `Data quality` details dialog to close it.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image248.png)
+13. Select the `Business Catalog Enrichment` breadcrumb at the top of the page to go back to the project home page..
+
+### 2. Add DB2 Connection
+Before proceeding with the following data quality tasks, the internal Db2 database platform connection that was created earlier needs to be added to the project so the Quality Analyst can select it as the external output destination to create the data quality exception table that will store data quality exception records during the creation of the data quality rule.
+
+Steps: 
+1. Click the `New asset +` button.
+2. Select the `Prepare data` goal from the tools menu on the left.
+3. Select the `Connect to data source` task.
+4. Enter the word db2 into the search area.
+5. Select the IBM Db2 data source type from the left side panel.
+6. Click the Select a platform connection tab.
+7. Select the Db2 Database platform connection radio button.
+8. Click the Next button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image252.png)
+9. Click the Create button.
+
+
+### 3. Create Data Quality Definition
+A data quality definition is like a blueprint that uses logical expressions to describe what the data should look like or how often it should occur. These logical expressions follow a basic syntax where a variable, such as a word or term, is evaluated based on a specified condition or type of check. The Quality Analyst decides to create a data quality definition for proper US Zip code values. It can be created directly from the data asset by following a specific path.
+
+Steps:
+1. Select the `EMPLOYEE` data asset.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image254.png)
+2. Click the Data Quality tab.
+3. Select the X in the top right corner of the About this asset panel to close it and gain more real estate.
+4. Scroll down to the Data quality checks section.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image255.png)
+5. Using the Create data quality check dropdown, select Create data quality definition.
+6. Fill `Name` : ` US Zip Code Validation`
+7. Fill `Description` : `Ensure that US zip codes are properly formatted.`
+8. Using the Data quality dimension dropdown, select Validity.
+9. Click the Next button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image257.png)
+10. Fill `Rule expression` field: `ZIP MATCHES_FORMAT '99999'`
+11. Click the Create button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image258.png)
+12. Close the new tab that just opened up in your browser.
+13. Go back to the original tab in your browser that launched the new tab.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image259.png)
+14. Select the `Business Catalog Enrichment` breadcrumb at the top of the page to go back to the project home page.
+15. Select the `US Zip Code Validation` data quality definition.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image261.png)
+
+### 4. Create Data Quality Rule
+In this step, a data quality rule will be created from the data quality definition. Data quality rules link the logical variables in a definition to the actual data to evaluate and validate the conditions specified in the definition. Each rule run outputs statistics and information about potential exceptions in the rule's output table.
+
+Steps:
+1. Click the Create rule + button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image264.png)
+2. Fill `Name` field: Validate Zip Codes
+3. Fill `Description` field: Ensure that zip codes follow the US zip code format.
+4. Click the `Next` button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image265.png)
+5. Click the Select column + button under the Bind to column for the zip row to select the column in the data set to bind to Zip Code.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image266.png)
+6. Select the EMPLOYEE data asset.
+7. Scroll down the list of columns and select radio button next to the ZIP_CODE column.
+8. Click the Select button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image267.png)
+9. Click the Next button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image268.png)
+10. Click the Next button.
+11. Click the Next button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image270.png)
+12. Toggle the output switch to External.
+13. Select the radio button to Write to a new database table in the Output section.
+14. Using the Connection dropdown, select Db2.
+15. Using the Schema dropdown, select DB2INST1
+16. Fill `Table` field: DQ_ZIP_RECORDS
+17. Scroll down to the Output content section.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image271.png)
+18. Using the Add content output dropdown, select Columns.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image272.png)
+19. Select the EMPLOYEE data asset.
+20. Click on the Slider and drag it to the right to see the full column names.
+21. Select the checkbox next to the EMPLOYEE_CODE column.
+22. Select the checkbox next to the STATE_CODE column.
+23. Click the Select button. 
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image273.png)
+24. Click the Next button.
+25. Click the Test button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image275.png)
+There are 4 invalid Zip Codes with a value of 2124 which is an invalid format for a US zip code. It appears that the first digit should be a zero and the actual values should be 02124. We know this because the STATE_CODE is provided in the output content and all 4 rows in error are employees in the state of Massachusets (MA), and with a little research, 02124 happens to be the zip code for Boston Massachusets. These rows can now be fixed because the EMPLOYEE_CODE was included in the exception record content so the rows can be easily identified and corrected.
+26. Select the X in the top right corner to close the test rule dialog.
+27. The test results were enlightening and satisfactory and provided the information needed to remediate the bad zip code values for 4 rows in the EMPLOYEE table so the rule can now be created. Click the Create button.
+
+ⓘ Notice: That a DataStage flow was created in addition to the Data Quality Definition and the Data Quality Rule. The flow was created when the data quality rule was tested to write the exception records to the Db2 database table so Knowledge Catalog could present the results. This is provided by the Enterprise Plus version of DataStage (which is installed in this environment).
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image278.png)
+
+### 5. Create Data Quality SLA Rule
+Data quality SLA rules apply to data assets in projects and must be activated for each project separately in the metadata enrichment settings. They are evaluated during metadata enrichment when data quality checks are run, or when data quality rules are run.
+
+Steps:
+1. Select the Navigation menu (the 4 stacked horizontal lines in the upper left corner).
+2. Select the Governance > Rules menu.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image291.png)
+3. Using the Add rule dropdown, select New data quality SLA rule.
+4. Fill `Name` field: Validate US Zip Codes
+5. Fill `Business definition` field: Records that contain US Zip Code values must be correctly formatted.
+6. Click the Next button
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image293.png)
+7. Using the Any data asset dropdown, select with one of the business terms.
+8. Enter the word zip into the business term search area.
+9. Select Zip Code from the business term list that appears.
+10. Click the Add quality criteria + button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image294.png)
+11. Using the must have a dropdown, select validity dimension score.
+12. Keep the default equal to or greater than threshold of 100%.
+13. Click the Add subcondition + button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image295.png)
+14. Using the any column within dropdown, select with one of the business terms.
+15. Enter the word zip into the business term search area, select Zip Code from the business term list that appears.
+16. Using the must have a dropdown, select validity dimension score.
+17. Keep the default equal to or greater than threshold of 100%.
+18. Click the Select + button for the Remediation task.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image296.png)
+19. Select the Data Quality SQL Rule Remediation workflow.
+20. Click the Select button.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image297.png)
+
+
+### 6. Activate SLA Rule Monitoring
+The SLA rule is applied whenever a team member runs metadata enrichment on the data assets that meet the specified criteria, or a data quality rule on such data assets. The remediation task is triggered automatically and assigned by default to the data asset owner. Data quality SLA rules are global, and apply to all projects for which SLA rule monitoring is activated in the metadata enrichment settings.
+
+Steps:
+1. Select the Navigation menu (the 4 stacked horizontal lines in the upper left corner).
+2. Select the Projects > All projects menu.
+3. Select the Business Catalog Enrichment project.
+4. Click the Manage tab.
+5. Select Metadata enrichment from the left side settings menu.
+6. Scroll down to the SLA rule section.
+7. Click the Activate monitoring switch and toggle it to the On position. I will turn green and the label will read Data quality SLA rules active.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image301.png)
+8. Click the Assets tab.
+9. From the Assets types section on the left, select Metadata enrichments > Metadata Enrichments.
+10. Select the Business Catalog Enrichment metadata enrichment.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image302.png)
+11. Using the Ellipses... menu, select Enrich all assets.
+![image](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image303.png)
+12. Select the X in the top left corner of the About this metadata enrichment panel to close it.
+13. Click the Refresh button to update the status.
+14. Click the Refresh button in the notification message.
+
+<h1 id="section8">8. About IBM Knowledge Accelerator </h1>
+
 
 

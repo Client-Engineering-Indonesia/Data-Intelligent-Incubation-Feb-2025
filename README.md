@@ -7,7 +7,7 @@ Data intelligence is how organizations combine data management and metadata mana
 - Where did the data come from and where does it reside? 
 - Who is using data? How are they using it—and how should they use it for best results?
 - How are distinct datasets related to each other?
-<br>
+
 ### Workshop Objectives
 In this workshop, data leaders will learn key principles and best practices for enhancing data intelligence within their organizations. 
 - First, you will explore how to **assemble data assets** from across your enterprise, **perform AI-powered metadata enrichment** with predefined or custom properties, and **organize them** into well-governed catalogs.
@@ -33,11 +33,21 @@ This workshop includes several labs with steps you can follow at your own pace. 
 
 [Lab 2: Data Lineage](https://github.com/CloudPak-Outcomes/Outcomes-Projects/blob/main/IBM%20Manta%20L3%20Lab/IBM-Manta-L3-Lab.zip)
 
-### Lab Environment: 
-https://cpd-cpd.apps.678e0a57f501a868a5828e19.ocp.techzone.ibm.com/
-This environment is active only during this workshop.
+### Lab Environments: 
+| No | Organization | URL | Admin Password | 
+| --- | --- | --- | --- |
+| 1 | BRI | https://cpd-cpd.apps.67a0639df9f6659c21a1145c.ocp.techzone.ibm.com | yOcJw-Qbqpd-deCUD-ZkpJy |
+| 2 | Mandiri | https://cpd-cpd.apps.67a063a2234e92463ac6b6f2.ocp.techzone.ibm.com | iwzxJ-KpoAc-zuJGR-OzMWM |
+| 3 | Jasindo | https://cpd-cpd.apps.67a063a4adf42b5f8ef28773.ocp.techzone.ibm.com | BZwvQ-XUusA-erfhp-uSziY |
+| 4 | Airmas | https://cpd-cpd.apps.67a063a6adf42b5f8ef28774.ocp.techzone.ibm.com | Ksqtc-vVqMb-kECtk-hEoon |
+| 5 | Dikstra | https://cpd-cpd.apps.67a063a8adf42b5f8ef28775.ocp.techzone.ibm.com | Otcfx-KYYhO-jelJw-sfiSm |
+
+These enviroments will expire on 6th Feb 2025 at 16.40 pm and students will not be able to access their work anymore.
 
 ### List of Accounts:
-| Username | Password | Details |
+| Full Name | Username | Password | 
 | --- | --- | --- |
-|     |     |     |
+| Business User  |  business-user | cpdbuser |
+| Privacy Steward | privacy-steward | cpdpsteward |
+| Quality Analyst | quality-analyst | cpdqanalyst |
+| Data Steward | data-steward | cpdsteward |
