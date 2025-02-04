@@ -175,40 +175,41 @@ This step creates a Metadata import with a goal of Get ETL job lineage using an 
 
 
 ## Review BI Report Lineage
-1. 
-<img width="1135" alt="82-" src="https://github.com/user-attachments/assets/c98c57f6-ded7-4286-9f86-7dafa6ab3505" />
+1. Select the Executive Dashboard breadcrumb at the top of the page to go back to the catalog home page. <img width="1135" alt="82-" src="https://github.com/user-attachments/assets/c98c57f6-ded7-4286-9f86-7dafa6ab3505" />
 
-2. 
-<img width="1136" alt="83-" src="https://github.com/user-attachments/assets/bed4e282-93ca-41ec-a55d-0b6e07da36c2" />
+2. Select the arrow next to the Asset Type section to open it. Uncheck the checkbox next to the Data integration job asset type. Click the View all (8) link to view all asset types. <img width="1136" alt="83-" src="https://github.com/user-attachments/assets/bed4e282-93ca-41ec-a55d-0b6e07da36c2" />
 
-3.
-<img width="1137" alt="84-" src="https://github.com/user-attachments/assets/9d86b4aa-47a4-4a4e-869e-39668faa0c16" />
+3. Select the Report data type. Click the Select button. <img width="1137" alt="84-" src="https://github.com/user-attachments/assets/9d86b4aa-47a4-4a4e-869e-39668faa0c16" />
 
-4.
+4. Click the Apply button. 
 <img width="1136" alt="85-" src="https://github.com/user-attachments/assets/009bf7e7-eeea-49d3-be06-55368572cf0a" />
 
-5.
+5. Select the OUTCOMES report. 
 <img width="1136" alt="86-" src="https://github.com/user-attachments/assets/29a83fd8-2dd3-4d43-a0cc-5e2cbad9227e" />
 
-6.
+6. Select the Lineage tab.
 <img width="1135" alt="87-" src="https://github.com/user-attachments/assets/19e2987a-6331-4ae7-ba85-747637f7e8c8" />
 
-7.
-<img width="1136" alt="88-" src="https://github.com/user-attachments/assets/506a136e-3a59-4779-9ea9-e8270fb35ccc" />
+7. On the left side of the lineage graph are the Cognos report queries that were created by the analytics team to access the Db2 tables in the OUTCOMES schema: CUSTOMER_SUMMARY and WAREHOUSE_ASSIGNED_SHIFTS (hence the name of the report) that were populated by DataStage and read as input by Cognos to build the executive management report. On the right is the Cognos report. This is the Starting asset for the business lineage
 
-8.
-<img width="1138" alt="89-" src="https://github.com/user-attachments/assets/09b83d81-bca2-4860-b68d-27a91029a31c" />
+    Notice: that the Mini-map and Legend are opened because they were already selected as settings for the ETL job business lineage review. 
+    Also Notice: that there are no dashed lines indicating there is more detail to drill down into. A much more summarized view than the ETL job's business lineage <img width="1136" alt="88-" src="https://github.com/user-attachments/assets/506a136e-3a59-4779-9ea9-e8270fb35ccc" />
 
-9.
-<img width="1136" alt="90-" src="https://github.com/user-attachments/assets/77de7e19-9c99-46c9-9692-81d4f11589b1" />
+10. Click the Starting asset (the OUTCOMES report) on the right side of the business lineage graph. The asset details panel will open on the right. Hover over the Go to asset's technical data lineage link, right mouse click and select Open link in new tab. <img width="1138" alt="89-" src="https://github.com/user-attachments/assets/09b83d81-bca2-4860-b68d-27a91029a31c" />
 
-10.
+    Similar to the ETL job's lineage, there is a tremendous amount of detail when viewing the technical data lineage for the report. This is extremely valuable information because it shows the source of the data, the report queries that were executed, and every single column, calculation, and manipulation of the data to build out the contents of the executive management report.
+    
+    Click on a blank area of the canvas, hold down the left mouse key, and move the graph up and to the left to get a better view the technical details. ⓘ Notice: that the CUSTOMER table is included in the technical lineage view but the table was not queried and no columns from the table were used in the report. This is important because this is the table that contains the credit card sensitive personal information.
+
+11. Click the Options + button to open the option settings. <img width="1136" alt="90-" src="https://github.com/user-attachments/assets/77de7e19-9c99-46c9-9692-81d4f11589b1" />
+
+12. Click the Details tab in the Options settings. Select the high-level radio button above the H to set lineage viewing to the highest level. Click the Apply button. Select the minus sign - on the Options to close the settings.
 <img width="1135" alt="91-" src="https://github.com/user-attachments/assets/f3f509db-64c3-48ca-a8c5-cb2ef18b52c0" />
 
-11.
+13. In the WAREHOUSE_ASSIGNED_SHIFTS table select the EMPLOYEE_RATE column.
 <img width="1135" alt="92-" src="https://github.com/user-attachments/assets/e7333502-8bfb-4cb1-bb52-9505df848a39" />
 
-12.
+14. Select the arrow on the Element drop-down to open it.
 <img width="1136" alt="94-" src="https://github.com/user-attachments/assets/312313d7-eb44-4309-a8fe-983e9a2a13ee" />
 
 
