@@ -6,6 +6,9 @@ Table of contents:
 3. [Define Business Vocabulary](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section3)
 4. [Curate and enrich data assets](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section4)
 5. [Catalog Governed Data](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section5)
+6. [Define Policies and Rules](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section6) 
+7. [Manage Data Quality](https://github.com/Client-Engineering-Indonesia/Data-Intelligent-Incubation-Feb-2025/blob/main/IBM%20Knowledge%20Catalog/Hands-on%20Lab%20-%20IBM%20Knowledge%20Catalog.md#section7) 
+
 
 <h1 id="section1">1. Personas and their roles</h1>
 
@@ -236,16 +239,184 @@ Steps:
 12. Click the `Publish` button again without entering a comment.
 
 <h1 id="section4">4. Curate and enrich data assets</h1>
+Now that there is a well defined business glossary established with a complete set of published governance artifacts, the data curation process can begin. Data curation is the process of discovering and adding data assets to a project or a catalog, enriching them by assigning classifications, data classes, and business terms, and analyzing and improving the quality of the data.
 
-- create project 
-- review available connections
+### 1. Create the Enrichment Project 
+In this section, the project is created that will be used to create and execute the automated Metadata import and enrichment processes to discover and curate the data assets needed by the analytics project team before they are published to the governed Business catalog.
+
+Goals: 
+- [ ] Create a project in Data Studio
+- [ ] Manage access control
+- [ ] Adjust project settings
+
+Steps: 
+1. Select the `Navigation` menu (the 4 stacked horizontal lines in the upper left corner).
+2. Select the `Projects` > `All projects` menu.
+![section4_01](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image168.png)
+3. Click the `New project+` button.
+4. Insert the text below into the `Name` field:
+`Business Catalog Enrichment`
+5. Add `Description`: This project is used to import and enrich the metadata for the data assets that will be published to the Business catalog that will be accessible to the analytics project team for analytics and AI tasks.
+![section4_02](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image170.png)
+6. Click the `Create` button.
+
+#### Manage Access Control 
+In order to manage data quality for the project, the Quality Analyst needs be added to the project with Edit authority.
+1. Click the `Manage` tab.
+![section4_03](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image171.png)
+2. Select the `Access control` project menu.
+3. Using the `Add collaborators` dropdown, select `Add users`.
+![section4_04](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image172.png)
+4. Enter the word 'quality' in the search area.
+5. Select the checkbox next to the Quality Analyst user.
+6. Using the Role dropdown, select `Admin` for the Quality Analyst user.
+7. Click the `Add` button.
+![section4_05](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image173-1.png)
+
+#### Adjust Project Settings
+The project **Metadata enrichment settings** are distinct to each project and apply to all metadata enrichment assets created in a project. They are available as global project settings that can be set prior to the creation and execution of metadata enrichment jobs. As a best practice, these settings should be reviewed and adjusted in advance of creating and running metadata enrichment jobs to ensure they will produce the most accurate results.
+1. Select the `Metadata enrichment` settings project menu.
+2. Scroll down until the `Term assignment` settings are at the top of the page.
+3. In the Term assignment methods to use area, clear the `Machine learning` and  `Data-class-based assignments` check boxes. The only method that will be used and that wil remain selected is `Name matching`.
+4. In the Select assets used for training built in model and adjustment area, select the `From Project` radio button.
+5. Click the `Assets` tab.
+![section4_06](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image173-2.png)
+
+### 3. Import Platform Connections
+The Administrator has connected the platform to DB2 and PostgreSQL databases. Your task as a data steward is to import the connections into the project.
+
+Goal:
+- [ ] Import connections to DB2 and PostgreSQl
+
+Steps:
+1. Click the `Assets` tab.
+2. Click the `New asset +` button.
+![section4_07](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image173.png)
+3. Select the `Connect to a data source` task. Take some time to review the comprehensive list of data sources that we can connect to. Do you find data sources that are used in your organization?
 <img width="1244" alt="image" src="images/section4_1.png" />
 
-- import data assets
-- enrich data assets
-- review asset enrichment
-- review column enrichment
-- rectify 
+4. Enter the word `post` into the search area.
+5. Select the `PostgreSQL` data source type from the left side panel.
+6. Click the `Select a platform connection` tab.
+7. Select the `PostgreSQL` platform connection radio button.
+8. Click the `Next` button.
+![section4_08](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image175.png)
+9. Click the `Create` button.
+10. Redo the steps to add `DB2 Warehouse` data sources
+![section4_09](images/section4_09.png)
+
+### 4. Import the Data Assets
+This section uses the automated Metadata import tool to quickly and easily connect to data source connections to discover and add the data assets that are relevant to the enrichment project.
+
+Goals:
+- [ ] Import Employee table from DB2 Warehouse
+- [ ] Import some tables from PostgreSQL
+
+In this step, you will create the Metadata Import to import the Employee data asset from the Data Warehouse connection into the project.
+1. Click the `New asset +` button.
+![section4_10](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image177.png)
+2. Select the `Prepare data` goal from the tools menu on the left.
+3. Select the `Import metadata for data assets` tool.
+![section4_11](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image181.png)
+4. Select the `Discover` goal.
+5. Click the `Next` button.
+![section4_12](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image182.png)
+6. Fill `Name` field: `Db2 Warehouse Import`
+7. Fill `Description` field: `Discover and import the Employee data asset and associated metadata that were requested by the analytics project team that reside in the Db2 Warehouse data source`.
+8. Click the `Next` button.
+9. Select `This project (Business Catalog Enrichment)` as the target (it should be selected by default).
+10. Click the `Next` button.
+![section4_13](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image184.png)
+11. Click the `Select connection` button.
+12. Select the `Db2 Warehouse` connection from the Connections list on the left.
+13. Select the `Arrow` on the `EMPLOYEE` schema. `Do not select the checkbox` next to the `EMPLOYEE` schema. Doing so will select all tables in the schema.
+14. Select the checkbox for the `EMPLOYEE` table from the list.
+15. Click the `Select` button.
+![section4_14](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image186.png)
+16. Click the `Next` button. 
+17. Take the default Job name and leave the Run definition to Run after job creation. Click the `Next` button.
+18. Take the default `Advanced options` that are selected for `Update on reimport`. Click the `Next` button.
+19. Click the `Create` button.
+![section4_15](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image190.png) The import process should run quickly. In a few seconds, you should begin seeing the import process adding the data assets you selected to the Imported assets list. You can click on the Refresh button at the top of the page to update the results.
+20. When the import is complete, you should see a message at the top of the page: `Metadata import complete. 1 assets were imported successfully`. The data asset will appear in the Imported assets list and is now added to the project. Select the `Business Catalog Enrichment` project breadcrumb at the top of the page to get back to the project home page.
+![section4_16](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image192.png)
+
+In this step, you will create the Metadata Import to import the Warehouse data assets from the PostgreSQL connection into the project. 
+1. Click the `New asset +` button.
+2. Select the `Prepare data` goal from the tools menu on the left.
+3. Select the `Import metadata for data assets` tool.
+4. Select the `Discover` goal.
+5. Click the `Next` button.
+6. Fill `Name`: `PostgreSQL Import`
+7. Fill `Description`: `Discover and import the Warehouse data assets and associated metadata that were requested by the analytics project team that reside in the PostgreSQL data source.`
+8. Click the `Next` button.
+9. Select `This project (Business Catalog Enrichment)` as the target (It should be selected by default).
+10. Click the `Next` button.
+11. Click the `Select connection` button.
+12. Select the `PostgreSQL` connection from the Connections list on the left.
+13. Enter the word 'warehouse' in the schema search area.
+14. Select the Arrow on the WAREHOUSE schema. Do not select the checkbox next to the WAREHOUSE schema. Doing so will select all tables in the schema. This method shows you what tables are in the schema so you can see exactly what will be imported.
+15. Select the checkbox next to the `WAREHOUSE_SHIFTS`, `WAREHOUSE_STAFF`, and `WAREHOUSE_STAFFING` tables.
+16. Click the `Select` button.
+![section4_17](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image194.png)
+17. Click the `Next` button.
+18. Take the default Job name and leave the Run definition to `Run after job creation`. Click the `Next` button.
+19. Take the default `Advanced options` that are selected for `Update on reimport`. Click the `Next` button.
+20. Click the `Create` button.
+When the import is complete, you should see a message at the top of the page: `Metadata import complete. 3 assets were imported successfully.` The data assets will appear in the Imported assets list and are now added to the project.
+
+### 5. Enrich the Data Assets
+This section uses the automated Metadata enrichment tool provided by Knowledge Catalog to enrich the data assets that were discovered and imported during the Metadata import processes that was just completed. Metadata imports can be used as input into Metadata enrichment processes to automatically profile the data, analyze and assess data quality, and assign data classifications and business terms by leveraging governance artifacts defined in the business glossary.
+
+Goal:
+- [ ] Run metadata enrichment on imported tables.
+
+Steps:
+1. Inside the `Project`, click the `New Asset +` button.
+2. Select the `Prepare data` goal from the tools menu on the left.
+3. Select the `Enrich data assets with metadata` tool.
+![section4_18](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image208.png)
+4. Fill `Name`: `Business Catalog Enrichment`
+5. FIll `Description`: `Enrich the metadata for all the data assets that are being published to the Business catalog for the analytics project team.`
+6. Click the `Next` button.
+![section4_19](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image209.png)
+7. Click the `Select data from project` button.
+8. Select the `Metadata Import` from the Asset types list on the left.
+9. Select the high level checkbox in the Metadata Imports section to select all the metadata imports you just completed.
+10. Click the `Select` button.
+![section4_20](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image211.png)
+11. Click the `Next` button.
+12. Select the checkbox for the `Profile data` Enrichment objective.
+13. Select the checkbox for the `Analyze quality` Enrichment objective.
+14. Select the checkbox for the `Assign terms` Enrichment objective.
+15. Click the `Select categories +` button.
+![section4_21](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image213.png)
+16. Select the checkbox next to the `[uncategorized]` category.
+17. Select the checkbox next to the `Business` category.
+18. Click the `Select` button.
+![section4_22](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image214.png)
+19. Select the `Basic` sampling method (it should be selected by default).
+20. Click the `Next` button.
+![section4_23](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image215.png)
+21. Select `All data assets` for the Data scope of reruns option (it should be selected by default).
+22. Click the `Next` button.
+![section4_24](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image216.png)
+23. Take a minute to review the metadata enrichment before creating it. The Data Scope will be analyzing 2 data assets (these are the 2 metadata imports that contain the 4 data assets that were just created) with an enrichment Objective to Profile data, Analyze quality and Assign terms across 5 Categories using the Basic sampling method. Click the `Create` button.
+![section4_25](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image217.png)
+24. Select the `Refresh` button to update the status and monitor the progress. Eventually a message will appear notifying you that the Metadata enrichment completed with a Refresh button.
+25. Select the `Refresh` button.
+26. Select the X in the top right corner of the `About this metadata enrichment` panel to close it to view the data asset enrichment status.
+![section4_26](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image219.png)
+
+
+### 6. Review Enrichment Result
+Notice that data classes are not assigned at the asset level and that no business terms were assigned at the asset level. It is more important to have business terms automatically assigned at the column level, especially if business terms are being used to trigger data protection rule actions. Business terms at the data asset level are primarily for informational purposes. 
+![section4_27](https://cp4d-outcomes.techzone.ibm.com/img/l4-pox/knowledge-catalog/image221.png)
+
+
+
+### 8. Rectify Enrichment Result
+
 
 <h1 id="section5">5. Catalog Governed Data</h1>
 
@@ -255,8 +426,8 @@ Steps:
 - augment postgreSQL
 - augment Employee Metadata
 
+<h1 id="section6">6. Define Policies and Rules</h1>
 
-6. Define Policies and Rules
 - Define workflow for data privacy
 - create governance policy
 - create governance rules 
@@ -265,8 +436,8 @@ Steps:
 - create email address rule
 - Approve as Privacy Steward
 
----
-7. Manage Data Quality 
+<h1 id="section7">7. Manage Data Quality </h1>
+
 - data quality remidiation workflow
 - review quality result
 - add db2 connection 
