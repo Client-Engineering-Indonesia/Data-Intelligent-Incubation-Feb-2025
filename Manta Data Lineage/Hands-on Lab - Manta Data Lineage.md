@@ -96,106 +96,82 @@ This step creates a Metadata import with a goal of Get ETL job lineage using an 
 
 
 ## Review Lineage Results
-1. 
-<img width="1136" alt="49-" src="https://github.com/user-attachments/assets/2895b93c-ecc8-4cca-a4e7-8d5e62c8fa41" />
+1. Select the Navigation menu (the 4 stacked horizontal lines in the upper left corner) <img width="1136" alt="49-" src="https://github.com/user-attachments/assets/2895b93c-ecc8-4cca-a4e7-8d5e62c8fa41" />
 
-2. 
-<img width="1136" alt="50-" src="https://github.com/user-attachments/assets/ae2d3e04-2409-4578-b791-eb234c7aa43e" />
+2. Select the Catalogs > All catalogs menu. <img width="1136" alt="50-" src="https://github.com/user-attachments/assets/ae2d3e04-2409-4578-b791-eb234c7aa43e" />
 
-3. 
-<img width="1134" alt="51-" src="https://github.com/user-attachments/assets/5c4e1648-e500-484e-ae6c-c6721e438b66" />
+3. Select the Executive Dashboard catalog. <img width="1134" alt="51-" src="https://github.com/user-attachments/assets/5c4e1648-e500-484e-ae6c-c6721e438b66" />
 
-4. 
-<img width="1134" alt="52-" src="https://github.com/user-attachments/assets/d4bdc6d5-bea4-4a5e-921f-63903f3d200b" />
+4. Click the Hide featured assets button to hide the assets. <img width="1134" alt="52-" src="https://github.com/user-attachments/assets/d4bdc6d5-bea4-4a5e-921f-63903f3d200b" />
 
-5. 
-<img width="1135" alt="53-" src="https://github.com/user-attachments/assets/b19e63b0-90e9-4440-ab7a-d655fbff901f" />
+5. Using the items per page filter, select 100 items per page. <img width="1135" alt="53-" src="https://github.com/user-attachments/assets/b19e63b0-90e9-4440-ab7a-d655fbff901f" />
 
-6.
-<img width="1136" alt="54-" src="https://github.com/user-attachments/assets/a38aa2d8-9f0e-4b45-8770-f511c0481362" />
+6. Scroll down the list of assets on the first page. <img width="1136" alt="54-" src="https://github.com/user-attachments/assets/a38aa2d8-9f0e-4b45-8770-f511c0481362" />
 
 ## Review ETL Job Lineage
 
-1. 
-<img width="1138" alt="55-" src="https://github.com/user-attachments/assets/e3443e57-a330-4061-b19d-7609533353ec" />
+1. Click the Filter button next to the left of the search area. Select the arrow next to the Asset Type section to open it. Select the Data integration job asset type from the list. Click the Apply button. <img width="1136" alt="56-" src="https://github.com/user-attachments/assets/3b9d235b-d208-4338-9383-5eb6563097ef" />
 
-2. 
-<img width="1136" alt="56-" src="https://github.com/user-attachments/assets/3b9d235b-d208-4338-9383-5eb6563097ef" />
+2. Select the Executive Dashboard-Executive Dashboard.DataStage job data integration job from the list of assets. <img width="1134" alt="57-" src="https://github.com/user-attachments/assets/fe161630-97bc-4736-94ed-ed57e98f851d" />
 
-3. 
-<img width="1134" alt="57-" src="https://github.com/user-attachments/assets/fe161630-97bc-4736-94ed-ed57e98f851d" />
+3. Click the Arrow next to the Governance artifacts section to collapse it to gain more user interface real estate. Select the Lineage tab.  <img width="1137" alt="58-" src="https://github.com/user-attachments/assets/45b8212c-b12a-42d5-b0a7-4c6ac90a1973" />
 
-4.
-<img width="1137" alt="58-" src="https://github.com/user-attachments/assets/45b8212c-b12a-42d5-b0a7-4c6ac90a1973" />
+4. Click the Expand link in the DataStage job labeled Starting asset in the center of the lineage to view more details. <img width="1137" alt="59-" src="https://github.com/user-attachments/assets/3c9c04aa-402b-4197-ae52-132eefbc7dca" />
 
-5.
-<img width="1137" alt="59-" src="https://github.com/user-attachments/assets/3c9c04aa-402b-4197-ae52-132eefbc7dca" />
+    <img width="1137" alt="60-" src="https://github.com/user-attachments/assets/14c37b60-be9d-4b43-a2e8-c2d17e0f7ccf" />
 
-6.
-<img width="1137" alt="60-" src="https://github.com/user-attachments/assets/14c37b60-be9d-4b43-a2e8-c2d17e0f7ccf" />
+5.Using the Ellipses... on the CUSTOMER table, select Show all. <img width="1138" alt="61-" src="https://github.com/user-attachments/assets/5efaf428-0b1a-48d8-afd8-7ce9e9a904bd" />
 
-7.
-<img width="1138" alt="61-" src="https://github.com/user-attachments/assets/5efaf428-0b1a-48d8-afd8-7ce9e9a904bd" />
-
-8.
+    Notice: that the JOIN and PEEK stages of the DataStage flow are now displayed. Yet another level of detail than what was shown in the previous view. 
 <img width="1136" alt="62-" src="https://github.com/user-attachments/assets/f7e275cf-b4e9-4030-88cc-3fe239227f9c" />
 
-9.
-<img width="1134" alt="63-" src="https://github.com/user-attachments/assets/41442c19-6fba-497d-ba5a-b840424b00de" />
+6. Using the Ellipses... on the CUSTOMER_LOYALTY table, select Show all. <img width="1134" alt="63-" src="https://github.com/user-attachments/assets/41442c19-6fba-497d-ba5a-b840424b00de" />
 
-10.
+    Notice: that the CUSTOMER_LOYALTY table has now moved alongside the CUSTOMER table to show that they were joined together and then passed the     
+    results to the PEEK stage. Continual expansion of the graph exposes more details about the flow.
 <img width="1136" alt="64-" src="https://github.com/user-attachments/assets/877799ef-048c-4a70-b28c-43a85c0d6cb2" />
 
-11.
-<img width="1136" alt="65-" src="https://github.com/user-attachments/assets/4cb0e01a-2603-4097-a770-31c931ef0dcf" />
+7. Using the Ellipses... on the WAREHOUSE_ASSIGNED_SHIFTS table, select Show all. <img width="1136" alt="65-" src="https://github.com/user-attachments/assets/4cb0e01a-2603-4097-a770-31c931ef0dcf" />
 
-12.
+    Notice: that the final PEEK stage is now revealed and a full view of the end to end DataStage flow is displayed.
 <img width="1136" alt="66-" src="https://github.com/user-attachments/assets/19952800-7599-4fa8-aa4f-8cf0287eb600" />
 
-13.
-<img width="1137" alt="67-" src="https://github.com/user-attachments/assets/6eac6e83-d705-4d8a-bb72-34f8b80df8bc" />
+8. Select the Settings button on the toolbar. Click the Show mini map and Show legend setting to enable them. <img width="1137" alt="67-" src="https://github.com/user-attachments/assets/6eac6e83-d705-4d8a-bb72-34f8b80df8bc" />
 
-14.
-<img width="1136" alt="68-" src="https://github.com/user-attachments/assets/b278b3d7-a9fb-4b92-a5a2-c3707f80b5f7" />
+    The legend and mini map are placed in the bottom right corner of the graph. The legend helps users identify what the different objects, assets        and connections on the business lineage canvas represent. The mini map allows users to zoom in and out to resize the graph and to easily position 
+   and focus on a specific area of the graph. This is extremely helpful whe the graph is expanded begins to contain more details. <img width="1136" alt="68-" src="https://github.com/user-attachments/assets/b278b3d7-a9fb-4b92-a5a2-c3707f80b5f7" />
 
-15.
-<img width="1137" alt="69-" src="https://github.com/user-attachments/assets/bc979ed4-c502-4dca-b34e-049c92cc1c96" />
+9. Click the zoom slider on top of the mini map and resize the graph. Click inside the mini map and move the graph to the left. Click the Reset button on the toolbar to get back to the default summary view. <img width="1137" alt="69-" src="https://github.com/user-attachments/assets/bc979ed4-c502-4dca-b34e-049c92cc1c96" />
 
-16.
-<img width="1137" alt="70-" src="https://github.com/user-attachments/assets/eceb5196-469c-4616-9d1f-48f6af802415" />
+10. Click the Reset button on the warning dialog that appears. <img width="1137" alt="70-" src="https://github.com/user-attachments/assets/eceb5196-469c-4616-9d1f-48f6af802415" />
 
-17.
-<img width="1136" alt="71-" src="https://github.com/user-attachments/assets/4a03e7b1-440c-4ad9-a5f3-be76733b14e9" />
+11. Click the Starting asset (Executive Dashboard...) in the center of the business lineage graph. The asset details panel will open on the right. Hover over the Go to asset's technical data lineage link, click the Open link in new tab button or right mouse click and select Open link in new tab. <img width="1136" alt="71-" src="https://github.com/user-attachments/assets/4a03e7b1-440c-4ad9-a5f3-be76733b14e9" />
 
-18.
-<img width="1134" alt="72-" src="https://github.com/user-attachments/assets/405f0f1e-60da-4e55-9bb1-b70d6842065a" />
+    In the bottom left corner are the viewing controls to zoom in and out, undo and redo actions and to re-center the graph on the Start Node. In         this case, the Start Node is the Executive Dashboard DataStage job in the center of the graph.
 
-19.
-<img width="1136" alt="73-" src="https://github.com/user-attachments/assets/0162c749-21d9-42d0-b218-75e66776dc63" />
+    In the top right corner is the Options menu that controls the level of detail for all assets displayed on the graph. These controls will be           covered in just a few minutes to show the level of detail that is achievable and how much detail is provided by IBM Manta. Similar to business        lineage, the initial data lineage graph displayed is a collapsed summary with the lowest level of detail. It is up to the end user to change and      customize the Options to the level of detail they prefer. This is one of the many user interface customizations provided by IBM Manta that            differentiates it from the competition. <img width="1134" alt="72-" src="https://github.com/user-attachments/assets/405f0f1e-60da-4e55-9bb1-b70d6842065a" />
 
-20.
-<img width="1137" alt="74-" src="https://github.com/user-attachments/assets/59e817f4-0dc5-478f-8706-09780a385de8" />
+12. Click the Zoom out button 3-4 times to make the graph smaller. Click on the canvas, hold down the left mouse key and drag the graph to the left.      Click the Options + button to open the display options. Click the Export menu on the toolbar to see the export choices. Click the Export menu again to close it leaving just the Options open. <img width="1136" alt="73-" src="https://github.com/user-attachments/assets/0162c749-21d9-42d0-b218-75e66776dc63" />
 
-21.
-<img width="1137" alt="75-" src="https://github.com/user-attachments/assets/cbb20745-c579-4dbd-ad56-abe9ed0f4d0c" />
+13. There are multiple tabs with various Options settings: 
+- Resources - The assets available for viewing: Cognos, DataStage, Db2 and PostgreSQL. Cognos is available but does not apply to this perspective.
+- Filters - Ability to hide inner tables and transformations, functions, procedures and assets outside of the perspective being viewed.
+- Details - The level of technical detail preferred: Resource (R), Lowest (L), Low (L), Medium (M) (the current setting), High (H) and Mixed (X).
+- Colors - Changing the color scheme based on Resource, Category or Revision. <img width="1137" alt="74-" src="https://github.com/user-attachments/assets/59e817f4-0dc5-478f-8706-09780a385de8" />
 
-22.
-<img width="1136" alt="76-" src="https://github.com/user-attachments/assets/a28b52f7-e762-4f47-b749-a115977a114a" />
+14. In the Options resource tab, uncheck the Cognos and PostgreSQL resources. Click the Apply button. <img width="1137" alt="75-" src="https://github.com/user-attachments/assets/cbb20745-c579-4dbd-ad56-abe9ed0f4d0c" />
 
-23.
-<img width="1134" alt="77-" src="https://github.com/user-attachments/assets/df50d0dd-bc67-475a-8f3d-b27c03cc8b6e" />
+15. Click the Options + settings button to re-open the settings. <img width="1136" alt="76-" src="https://github.com/user-attachments/assets/a28b52f7-e762-4f47-b749-a115977a114a" />
 
-24.
-<img width="1136" alt="78-" src="https://github.com/user-attachments/assets/303b445d-54ac-47b0-995b-f1c5c609919e" />
+16. Click the Details tab in the Options settings. Select Low L (next to M) for Cognos and PostgreSQL and High H for Db2. Click the Apply button. The graph will adjust to the settings. <img width="1134" alt="77-" src="https://github.com/user-attachments/assets/df50d0dd-bc67-475a-8f3d-b27c03cc8b6e" />
 
-25.
-<img width="1136" alt="79-" src="https://github.com/user-attachments/assets/48c9277f-b5b7-4713-84ae-b7452d06442d" />
+17. On the bottom of the Db2 CUSTOMER table columns select View more. Click the Select all button in the column dialog to view all columns, then click on the canvas to close the dialog. <img width="1136" alt="78-" src="https://github.com/user-attachments/assets/303b445d-54ac-47b0-995b-f1c5c609919e" />
 
-26.
-<img width="1135" alt="80-" src="https://github.com/user-attachments/assets/c056190b-0a03-4899-83b3-29f6a181b431" />
+18. In the Options settings Details tab select the high-level radio button above the R to select all Resources. <img width="1136" alt="79-" src="https://github.com/user-attachments/assets/48c9277f-b5b7-4713-84ae-b7452d06442d" />
 
-27.
-<img width="1135" alt="81-" src="https://github.com/user-attachments/assets/750ac20d-a8a6-481f-815d-03834b4f0bcc" />
+19. In the Options settings Details tab select the high-level radio button above the H to set lineage viewing to the highest level. Click the Apply button. Select the minus sign - on the Options to close the settings. <img width="1135" alt="80-" src="https://github.com/user-attachments/assets/c056190b-0a03-4899-83b3-29f6a181b431" />
+
+20. Click the X on the IBM Automated Data Lineage tab to close it. Select and go back to the originating Cloud Pak for Data tab that launched the IBM Automated Data Lineage tab.<img width="1135" alt="81-" src="https://github.com/user-attachments/assets/750ac20d-a8a6-481f-815d-03834b4f0bcc" />
 
 
 ## Review BI Report Lineage
@@ -234,6 +210,62 @@ This step creates a Metadata import with a goal of Get ETL job lineage using an 
 
 12.
 <img width="1136" alt="94-" src="https://github.com/user-attachments/assets/312313d7-eb44-4309-a8fe-983e9a2a13ee" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
