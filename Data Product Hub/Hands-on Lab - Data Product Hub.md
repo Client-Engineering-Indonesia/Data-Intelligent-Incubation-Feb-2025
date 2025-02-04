@@ -151,6 +151,57 @@ Some data products are restricted and require approval from an approver designat
 ![image](https://github.com/user-attachments/assets/15b77cb8-cc30-4378-980a-bdf0990440c2)
 
 
+## Leveraging Flight Service
+1. Ensure you are on Cloud Pak for Data
+   <img width="317" alt="image" src="https://github.com/user-attachments/assets/850a1d88-e33f-4e49-8a48-1706baa25151" />
 
+2. Click the New Project button in the Recent Projects card on the welcome dashboard’s left side. Fill project name, description then click Submit button.
+   ![image](https://github.com/user-attachments/assets/388a3ef3-274c-4642-8a0e-fccbff36a232)
 
+3. Navigate to the project's Assets tab and click New Asset button
+   ![image](https://github.com/user-attachments/assets/263a37fa-9bca-4974-ac53-dd18eff5687c)
+
+4. Choose Jupyter notebook 
+   ![image](https://github.com/user-attachments/assets/6cb787e5-55da-497f-8e7e-c7810da35da8)
+
+5. Provide name and description then click Create button
+   ![image](https://github.com/user-attachments/assets/4944c4c4-6c75-4e57-a62e-38d677a22c0c)
+
+6. Copy and Paste the following template into the notebook to import the Data Product Connection information:
    
+
+```
+import itc_utils.flight_service as itcfs
+
+readClient = itcfs.get_flight_client()
+
+Customer_data_request = ## PASTE CUSTOMER FLIGHT SERVICE CONNECTION INFO HERE
+
+Employee_data_request = ## PASTE EMPLOYEE FLIGHT SERVICE CONNECTION INFO HERE
+
+Records_data_request = ## PASTE EMPLOYEE_HISTORY FLIGHT SERVICE CONNECTION INFO HERE
+```
+
+![image](https://github.com/user-attachments/assets/e14f0a41-930e-4fb7-b5dd-7fcd3bfed3cb)
+
+7. Return to the Subscription dashboard in Data Product Hub or where you have stored the variables. Copy the Flight Descriptor in Python connection information for CUSTOMER_LOYALTY and paste it as the value for Customer_data_request.
+   ![image](https://github.com/user-attachments/assets/6a92b09f-c46e-4b3f-aea0-48c885936809)
+
+   ![image](https://github.com/user-attachments/assets/9dcafcea-2b22-4970-931e-78227db62617)
+
+8. Copy and Paste the following cell into the notebook to create a function called get_data_product() to call the Flight Service and retrieve the data product:
+
+```
+def get_data_product(data_request):
+    flight_info = itcfs.get_flight_info(readClient, data_request=data_request)
+    data = itcfs.read_pandas_and_concat(readClient, flight_info)
+    return data
+
+## Retrieve Customer Loyalty Data
+get_data_product(Customer_data_request).head()
+```
+
+9. Select the Run dropdown menu and click the Run All Cells button in the dropdown to execute the cells and retrieve the Data Product.
+   ![image](https://github.com/user-attachments/assets/b232bd3a-482a-45ee-b959-98986fbeab0f)
+
+
