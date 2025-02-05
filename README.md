@@ -34,13 +34,11 @@ This workshop includes several labs with steps you can follow at your own pace. 
 [Lab 2: Data Lineage](https://github.com/CloudPak-Outcomes/Outcomes-Projects/blob/main/IBM%20Manta%20L3%20Lab/IBM-Manta-L3-Lab.zip)
 
 ### Lab Environments: 
-| No | Organization | URL | Admin Password | 
-| --- | --- | --- | --- |
-| 1 | BRI | https://cpd-cpd.apps.67a0639df9f6659c21a1145c.ocp.techzone.ibm.com | yOcJw-Qbqpd-deCUD-ZkpJy |
-| 2 | Mandiri | https://cpd-cpd.apps.67a063a2234e92463ac6b6f2.ocp.techzone.ibm.com | iwzxJ-KpoAc-zuJGR-OzMWM |
-| 3 | Jasindo | https://cpd-cpd.apps.67a063a4adf42b5f8ef28773.ocp.techzone.ibm.com | BZwvQ-XUusA-erfhp-uSziY |
-| 4 | Airmas | https://cpd-cpd.apps.67a063a6adf42b5f8ef28774.ocp.techzone.ibm.com | Ksqtc-vVqMb-kECtk-hEoon |
-| 5 | Dikstra | https://cpd-cpd.apps.67a063a8adf42b5f8ef28775.ocp.techzone.ibm.com | Otcfx-KYYhO-jelJw-sfiSm |
+| URL | password |
+| --- | --- |
+| https://cpd-cpd.apps.67a0639df9f6659c21a1145c.ocp.techzone.ibm.com | yOcJw-Qbqpd-deCUD-ZkpJy |
+| https://cpd-cpd.apps.67a063a4adf42b5f8ef28773.ocp.techzone.ibm.com | BZwvQ-XUusA-erfhp-uSziY |
+| https://cpd-cpd.apps.67a063a6adf42b5f8ef28774.ocp.techzone.ibm.com | Ksqtc-vVqMb-kECtk-hEoon |
 
 These enviroments will expire on 6th Feb 2025 at 16.40 pm and students will not be able to access their work anymore.
 
